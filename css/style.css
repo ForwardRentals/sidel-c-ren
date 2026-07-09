@@ -169,3 +169,8 @@ footer{border-top:1px solid var(--line);background:var(--bg2)}
 .foot .col a:hover{color:var(--ink)}
 .legal{border-top:1px solid var(--line);padding:20px 28px;text-align:center;color:#5f7568;font-size:.78rem}
 .legal b{color:var(--green2)}
+
+/* FreeSite Company footer credit */
+.legal a.fsc-credit{color:var(--green);font-weight:600;text-decoration:none;text-shadow:0 0 8px rgba(63,191,90,.75),0 0 20px rgba(63,191,90,.4);animation:fscGlow 2.8s ease-in-out infinite}
+.legal a.fsc-credit:hover{color:var(--cyan);text-shadow:0 0 10px rgba(94,230,196,.9),0 0 26px rgba(94,230,196,.5)}
+@keyframes fscGlow{0%,100%{text-shadow:0 0 8px rgba(63,191,90,.75),0 0 20px rgba(63,191,90,.4)}50%{text-shadow:0 0 12px rgba(63,191,90,1),0 0 30px rgba(63,191,90,.6)}}
