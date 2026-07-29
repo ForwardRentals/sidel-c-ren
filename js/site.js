@@ -7,6 +7,18 @@ addEventListener('scroll',()=>{
   if(nav)nav.classList.toggle('solid',h.scrollTop>40);
 },{passive:true});
 
+// mobile nav drawer
+const ntog=document.getElementById('navtoggle'),nlinks=document.getElementById('navlinks');
+if(ntog&&nlinks){
+  ntog.addEventListener('click',()=>{
+    const open=nlinks.classList.toggle('open');
+    ntog.setAttribute('aria-expanded',open?'true':'false');
+  });
+  nlinks.addEventListener('click',e=>{
+    if(e.target.tagName==='A'){nlinks.classList.remove('open');ntog.setAttribute('aria-expanded','false');}
+  });
+}
+
 // reveal on scroll
 const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.16});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));

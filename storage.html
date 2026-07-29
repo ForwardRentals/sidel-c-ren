@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CREN PCM Heat Storage — Sidel CREN</title>
+<title>Novacab TESS PCM Heat Storage — Sidel CREN</title>
 <link rel="icon" type="image/png" href="assets/cren-logo.png">
 <meta name="description" content="CREN PCM heat storage powered by Novacab TESS thermal batteries: recovered waste heat is banked as latent heat in synthetic phase change material, ready on demand.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,15 +16,15 @@
 
 <nav id="nav">
   <a class="brand" href="index.html"><span class="dot"></span><span>Sidel&nbsp;CREN<small>Carbon Resilient Energy Nexus</small></span></a>
-  <div class="navlinks">
+  <button class="navtoggle" id="navtoggle" aria-label="Open menu" aria-expanded="false"><span></span></button>
+  <div class="navlinks" id="navlinks">
     <a href="index.html#system">The System</a>
-    <a href="rpc.html">RPC</a>
-    <a href="sru.html">Condenser</a>
-    <a href="storage.html" class="active">Storage</a>
-    <a href="power.html">Power</a>
-    <a href="greenhouse.html">Greenhouse</a>
+    <a href="industries.html">Industries</a>
+    <a href="approach.html">Approach</a>
+    <a href="leadership.html">Leadership</a>
+    <a href="contact.html">Contact</a>
   </div>
-  <a class="navcta" href="index.html#contact">Book a Consultation</a>
+  <a class="navcta" href="contact.html">Book a Consultation</a>
 </nav>
 
 <header class="hero short" id="top">
@@ -35,6 +35,14 @@
     <p class="lead">Recovered heat is worth nothing if you can't hold onto it. CREN's storage stage banks low-grade waste heat as latent heat in a Novacab TESS thermal battery — charged when heat is abundant, discharged exactly when you need it.</p>
   </div>
 </header>
+
+<div class="stepstrip">
+  <a href="rpc.html">01 · RPC</a>
+  <a href="sru.html">02 · SRU Condenser</a>
+  <a class="on" href="storage.html">03 · PCM Storage</a>
+  <a href="power.html">04 · ORC Power</a>
+  <a href="greenhouse.html">05 · Greenhouse</a>
+</div>
 
 <section class="block tight">
   <div class="stats" style="grid-template-columns:repeat(3,1fr)">
@@ -63,7 +71,7 @@
   <blockquote class="reveal">"The business benefits of climate action are clear. Companies that align their strategy with climate science — and quickly integrate low-carbon solutions — are best placed to thrive in a net-zero economy."</blockquote>
   <div class="who reveal d1">
     <img src="assets/stephane.jpg" alt="Stephane Bilodeau">
-    <div style="text-align:left"><b>Stephane Bilodeau, Eng., PhD, FEC</b><span>Chief Technology Officer · Novacab / TESS</span></div>
+    <div style="text-align:left"><b>Dr. Stephane Bilodeau, Eng., Ph.D., FEC</b><span>Inventor of Novacab TESS · Smart Phases Inc.</span></div>
   </div>
 </section>
 
@@ -74,32 +82,39 @@
 
 <footer>
   <div class="foot">
-    <div class="col">
+    <div class="col" style="max-width:330px">
       <a class="brand" href="index.html" style="margin-bottom:14px"><span class="dot"></span><span>Sidel CREN<small>Carbon Resilient Energy Nexus</small></span></a>
-      <p>Sidel Systems × CREN × Novacab TESS.<br>Turning rejected heat into clean power, water &amp; food.</p>
+      <p>Carbon Resilient Energy NEXUS,&nbsp;Inc. DBA Sidel&nbsp;CREN.</p>
+      <p>Sidel Systems USA &times; SAI-DEL / Sidel Systems India &times; Smart Phases / Novacab.</p>
+      <p style="color:#7d9187">Stop the Waste. Power the Future.</p>
     </div>
     <div class="col">
       <h5>The System</h5>
       <a href="rpc.html">Rotary Particulate Collector</a>
       <a href="sru.html">SRU Flue Gas Condenser</a>
-      <a href="storage.html">CREN PCM Heat Storage</a>
+      <a href="storage.html">TESS PCM Heat Storage</a>
       <a href="power.html">ORC + Turbine Power</a>
       <a href="greenhouse.html">Greenhouse Value</a>
     </div>
     <div class="col">
       <h5>Company</h5>
-      <a href="index.html#problem">The Big Picture</a>
+      <a href="industries.html">Industries We Serve</a>
+      <a href="approach.html">Our Approach</a>
+      <a href="leadership.html">Leadership</a>
       <a href="index.html#proof">Why Believe It</a>
-      <a href="index.html#contact">Contact</a>
+      <a href="contact.html">Contact</a>
     </div>
     <div class="col">
       <h5>Get in touch</h5>
-      <p>michaellogan@sidelcren.com</p>
-      <p>(281) 813-2612</p>
-      <p>Atascadero, CA · USA</p>
+      <p style="color:#e6f0ea;font-weight:600;margin-bottom:2px">Michael Logan</p>
+      <p style="margin-bottom:12px">President &amp; Chairman, Sidel CREN</p>
+      <a href="mailto:michaellogan@sidelcren.com">michaellogan@sidelcren.com</a>
+      <a href="tel:+18054621250">(805) 462-1250</a>
+      <a href="tel:+12818132612">(281) 813-2612</a>
+      <p style="margin-top:12px">1500 North Grant St., Suite 10435<br>Denver, CO 80203 &middot; USA</p>
     </div>
   </div>
-  <div class="legal">© 2026 <b>Sidel CREN</b> · Sidel Systems · CREN · Novacab · TESS Energy · RPC · Website made for free by <a href="https://freesitecompany.com" class="fsc-credit">FreeSite Company</a></div>
+  <div class="legal">&copy; 2026 <b>Carbon Resilient Energy NEXUS, Inc.</b> DBA Sidel CREN &middot; Sidel Systems &middot; SAI-DEL &middot; Novacab &middot; TESS &middot; RPC &middot; Website made for free by <a href="https://freesitecompany.com" class="fsc-credit">FreeSite Company</a></div>
 </footer>
 
 <script src="js/site.js"></script>
