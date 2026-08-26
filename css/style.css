@@ -37,7 +37,7 @@ nav.solid{background:rgba(6,17,11,.85);border-color:var(--line)}
   .navlinks a{padding:14px 28px;border-bottom:1px solid rgba(255,255,255,.05);font-size:.95rem}
   .navtoggle{display:flex}
   nav{background:rgba(6,17,11,.9)}
-  .navcta{display:none}
+  .navlinks .navcta{display:block;width:calc(100% - 56px);margin:14px 28px 18px;text-align:center;border-bottom:none}
 }
 
 /* hero */
