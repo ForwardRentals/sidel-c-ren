@@ -33,6 +33,40 @@ const cio=new IntersectionObserver(es=>{es.forEach(e=>{
 })},{threshold:.6});
 document.querySelectorAll('[data-count]').forEach(el=>cio.observe(el));
 
+// lead form — posts to the Cloudflare Worker, which files a GitHub Issue
+const LEAD_ENDPOINT = "https://REPLACE-WITH-WORKER-URL.workers.dev";
+const leadform = document.getElementById('leadform');
+if (leadform) {
+  leadform.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = document.getElementById('lf-submit');
+    const msg = document.getElementById('lf-msg');
+    const data = Object.fromEntries(new FormData(leadform).entries());
+    btn.disabled = true;
+    const originalLabel = btn.textContent;
+    btn.textContent = 'Sending…';
+    msg.className = 'formmsg';
+    try {
+      const res = await fetch(LEAD_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+      const out = await res.json();
+      if (!res.ok || !out.ok) throw new Error(out.error || 'Something went wrong');
+      leadform.reset();
+      msg.textContent = "Thanks — we've got it. We'll follow up shortly.";
+      msg.className = 'formmsg show ok';
+    } catch (err) {
+      msg.textContent = "Couldn't send that automatically — please email michaellogan@sidelcren.com or call (805) 462-1250 instead.";
+      msg.className = 'formmsg show err';
+    } finally {
+      btn.disabled = false;
+      btn.textContent = originalLabel;
+    }
+  });
+}
+
 // parallax on showcase images
 const px=[...document.querySelectorAll('.showcase img')];
 addEventListener('scroll',()=>{
