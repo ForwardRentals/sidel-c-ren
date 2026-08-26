@@ -33,8 +33,8 @@ const cio=new IntersectionObserver(es=>{es.forEach(e=>{
 })},{threshold:.6});
 document.querySelectorAll('[data-count]').forEach(el=>cio.observe(el));
 
-// lead form — posts to the Cloudflare Worker, which files a GitHub Issue
-const LEAD_ENDPOINT = "https://sidel-cren-leads.thefulltimehobby.workers.dev";
+// lead form — posts straight to Web3Forms, which emails Michael Logan directly
+const WEB3FORMS_ACCESS_KEY = "98a0a540-06c8-40fb-a156-5d4c6821a5a4";
 const leadform = document.getElementById('leadform');
 if (leadform) {
   leadform.addEventListener('submit', async (e) => {
@@ -42,18 +42,20 @@ if (leadform) {
     const btn = document.getElementById('lf-submit');
     const msg = document.getElementById('lf-msg');
     const data = Object.fromEntries(new FormData(leadform).entries());
+    data.access_key = WEB3FORMS_ACCESS_KEY;
+    data.subject = `Sidel CREN — Consultation Request from ${data.name || 'website visitor'}`;
     btn.disabled = true;
     const originalLabel = btn.textContent;
     btn.textContent = 'Sending…';
     msg.className = 'formmsg';
     try {
-      const res = await fetch(LEAD_ENDPOINT, {
+      const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify(data),
       });
       const out = await res.json();
-      if (!res.ok || !out.ok) throw new Error(out.error || 'Something went wrong');
+      if (!res.ok || !out.success) throw new Error(out.message || 'Something went wrong');
       leadform.reset();
       msg.textContent = "Thanks — we've got it. We'll follow up shortly.";
       msg.className = 'formmsg show ok';
