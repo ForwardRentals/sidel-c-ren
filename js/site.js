@@ -34,7 +34,7 @@ const cio=new IntersectionObserver(es=>{es.forEach(e=>{
 document.querySelectorAll('[data-count]').forEach(el=>cio.observe(el));
 
 // lead form — posts to the Cloudflare Worker, which files a GitHub Issue
-const LEAD_ENDPOINT = "https://REPLACE-WITH-WORKER-URL.workers.dev";
+const LEAD_ENDPOINT = "https://sidel-cren-leads.thefulltimehobby.workers.dev";
 const leadform = document.getElementById('leadform');
 if (leadform) {
   leadform.addEventListener('submit', async (e) => {
