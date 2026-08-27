@@ -3,19 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Waste Heat Recovery by Industry — Dairy, Sugar, Power, Steel &amp; Data Centers — Sidel CREN</title>
+<title>Waste Heat Recovery by Industry — Dairy, Sugar, Power, Steel, Data Centers &amp; Concrete — Sidel CREN</title>
 <link rel="icon" type="image/png" href="assets/cren-logo.png">
-<meta name="description" content="Industrial waste heat recovery applied to dairies, sugar mills, fossil-fuelled power plants, steel and metals operations, and data centers — via the Sidel CREN platform: SRU flue-gas condenser, RPC particulate capture and Novacab TESS thermal storage.">
+<meta name="description" content="Industrial waste heat recovery applied to dairies, sugar mills, fossil-fuelled power plants, steel and metals operations, data centers and concrete manufacturing — via the Sidel CREN platform: SRU flue-gas condenser, RPC particulate capture and Novacab TESS thermal storage.">
 <link rel="canonical" href="https://sidelcren.com/industries.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Sidel CREN">
-<meta property="og:title" content="Waste Heat Recovery by Industry — Dairy, Sugar, Power, Steel &amp; Data Centers — Sidel CREN">
-<meta property="og:description" content="Industrial waste heat recovery applied to dairies, sugar mills, fossil-fuelled power plants, steel and metals operations, and data centers — via the Sidel CREN platform: SRU flue-gas condenser, RPC particulate capture and Novacab TESS thermal storage.">
+<meta property="og:title" content="Waste Heat Recovery by Industry — Dairy, Sugar, Power, Steel, Data Centers &amp; Concrete — Sidel CREN">
+<meta property="og:description" content="Industrial waste heat recovery applied to dairies, sugar mills, fossil-fuelled power plants, steel and metals operations, data centers and concrete manufacturing — via the Sidel CREN platform: SRU flue-gas condenser, RPC particulate capture and Novacab TESS thermal storage.">
 <meta property="og:url" content="https://sidelcren.com/industries.html">
 <meta property="og:image" content="https://sidelcren.com/assets/plant-aerial.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Waste Heat Recovery by Industry — Dairy, Sugar, Power, Steel &amp; Data Centers — Sidel CREN">
-<meta name="twitter:description" content="Industrial waste heat recovery applied to dairies, sugar mills, fossil-fuelled power plants, steel and metals operations, and data centers — via the Sidel CREN platform: SRU flue-gas condenser, RPC particulate capture and Novacab TESS thermal storage.">
+<meta name="twitter:title" content="Waste Heat Recovery by Industry — Dairy, Sugar, Power, Steel, Data Centers &amp; Concrete — Sidel CREN">
+<meta name="twitter:description" content="Industrial waste heat recovery applied to dairies, sugar mills, fossil-fuelled power plants, steel and metals operations, data centers and concrete manufacturing — via the Sidel CREN platform: SRU flue-gas condenser, RPC particulate capture and Novacab TESS thermal storage.">
 <meta name="twitter:image" content="https://sidelcren.com/assets/plant-aerial.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,7 +50,7 @@
     "@type": "Organization",
     "name": "Sidel CREN"
   },
-  "description": "Waste heat recovery applied to large dairy, sugar mills, fossil-fuelled power plants, steel and metals operations, and data centers via the Sidel CREN platform.",
+  "description": "Waste heat recovery applied to large dairy, sugar mills, fossil-fuelled power plants, steel and metals operations, data centers and concrete manufacturing via the Sidel CREN platform.",
   "audience": [
     {
       "@type": "BusinessAudience",
@@ -71,6 +71,10 @@
     {
       "@type": "BusinessAudience",
       "audienceType": "Data Centers"
+    },
+    {
+      "@type": "BusinessAudience",
+      "audienceType": "Concrete Manufacturing"
     }
   ]
 }
@@ -78,6 +82,18 @@
 </head>
 <body>
 <div id="prog"></div>
+
+<div class="searchmodal" id="searchmodal" role="dialog" aria-modal="true" aria-label="Search Sidel CREN">
+  <div class="searchbox">
+    <div class="si-row">
+      <span class="si-icon"></span>
+      <input type="text" id="searchinput" placeholder="Search industries, RPC, SRU, ASHRAE, data centers…" autocomplete="off">
+      <button class="searchclose" id="searchclose">Esc</button>
+    </div>
+    <div class="searchresults" id="searchresults"></div>
+    <div class="searchhint">Press <kbd>/</kbd> to search from anywhere</div>
+  </div>
+</div>
 
 <nav id="nav">
   <a class="brand" href="index.html"><span class="dot"></span><span>Sidel&nbsp;CREN<small>Carbon Resilient Energy Nexus</small></span></a>
@@ -92,12 +108,14 @@
         <a href="power-plant-waste-heat-recovery.html">Power Generation</a>
         <a href="steel-mill-waste-heat-recovery.html">Steel &amp; Metals</a>
         <a href="data-center-waste-heat-recovery.html">Data Centers</a>
+        <a href="concrete-plant-waste-heat-recovery.html">Concrete</a>
       </div>
     </div>
     <a href="case-studies.html">Case Studies</a>
     <a href="approach.html">Approach</a>
     <a href="leadership.html">Leadership</a>
     <a href="contact.html">Contact</a>
+    <button class="searchtoggle" id="searchtoggle" aria-label="Search the site" title="Search (press /)"><span></span></button>
     <a class="navcta" href="contact.html#audit-form">Book a Consultation</a>
   </div>
 </nav>
@@ -105,8 +123,8 @@
 <header class="hero short" id="top">
   <div class="hero-bg"><img src="assets/plant-aerial.jpg" alt="Aerial view of a heavy industrial plant"></div>
   <div class="hero-inner">
-    <span class="eyebrow">WASTE HEAT RECOVERY BY INDUSTRY · Dairy · Sugar · Fossil Power · Steel &amp; Metals · Data Centers</span>
-    <h1>Five industries.<br><span class="grad">One thermal problem.</span></h1>
+    <span class="eyebrow">WASTE HEAT RECOVERY BY INDUSTRY · Dairy · Sugar · Fossil Power · Steel &amp; Metals · Data Centers · Concrete</span>
+    <h1>Six industries.<br><span class="grad">One thermal problem.</span></h1>
     <p class="lead">Every one of them buys fuel, converts it to heat, uses a fraction of it, and rejects the rest through stacks, condensers and cooling towers. Sidel CREN's waste heat recovery systems recover that rejected energy, store it, reuse it, and convert it — energy that's already paid for.</p>
   </div>
 </header>
@@ -145,6 +163,12 @@
       <p>The fastest-growing electricity load in the country — cooling alone can be up to 80% of non-compute power draw, and liquid cooling is finally making that heat recoverable.</p>
       <div class="go">Data center detail →</div>
     </div></a>
+    <a class="ind reveal d2" href="concrete-plant-waste-heat-recovery.html"><div class="bd">
+      <div class="badge">Industry 06</div>
+      <h3>🧱 Concrete Manufacturing</h3>
+      <p>Ready-mix is thermally light, but precast and prestressed plants run curing chambers, boilers and batch-water cooling at nearly ten times the energy intensity per unit of product.</p>
+      <div class="go">Concrete detail →</div>
+    </div></a>
   </div>
   <div class="note reveal">
     <h5>How to read this page</h5>
@@ -155,7 +179,7 @@
 <section class="block tight">
   <div class="kick reveal">Full detail, industry by industry</div>
   <h2 class="reveal d1">Each industry now has its own page.</h2>
-  <p class="sub reveal d2">Planning-basis figures, the waste-energy map, first-pilot approach and the exact data we'd ask for &mdash; on its own page for <a href="dairy-waste-heat-recovery.html" style="color:var(--green2)">dairy</a>, <a href="sugar-mill-waste-heat-recovery.html" style="color:var(--green2)">sugar mills</a>, <a href="power-plant-waste-heat-recovery.html" style="color:var(--green2)">gas &amp; coal power</a>, <a href="steel-mill-waste-heat-recovery.html" style="color:var(--green2)">steel &amp; metals</a>, and <a href="data-center-waste-heat-recovery.html" style="color:var(--green2)">data centers</a>. Pick a card above, or a menu link, to go straight there.</p>
+  <p class="sub reveal d2">Planning-basis figures, the waste-energy map, first-pilot approach and the exact data we'd ask for &mdash; on its own page for <a href="dairy-waste-heat-recovery.html" style="color:var(--green2)">dairy</a>, <a href="sugar-mill-waste-heat-recovery.html" style="color:var(--green2)">sugar mills</a>, <a href="power-plant-waste-heat-recovery.html" style="color:var(--green2)">gas &amp; coal power</a>, <a href="steel-mill-waste-heat-recovery.html" style="color:var(--green2)">steel &amp; metals</a>, <a href="data-center-waste-heat-recovery.html" style="color:var(--green2)">data centers</a>, and <a href="concrete-plant-waste-heat-recovery.html" style="color:var(--green2)">concrete manufacturing</a>. Pick a card above, or a menu link, to go straight there.</p>
 </section>
 
 <div class="showcase">

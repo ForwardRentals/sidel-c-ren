@@ -75,6 +75,18 @@
 <body>
 <div id="prog"></div>
 
+<div class="searchmodal" id="searchmodal" role="dialog" aria-modal="true" aria-label="Search Sidel CREN">
+  <div class="searchbox">
+    <div class="si-row">
+      <span class="si-icon"></span>
+      <input type="text" id="searchinput" placeholder="Search industries, RPC, SRU, ASHRAE, data centers…" autocomplete="off">
+      <button class="searchclose" id="searchclose">Esc</button>
+    </div>
+    <div class="searchresults" id="searchresults"></div>
+    <div class="searchhint">Press <kbd>/</kbd> to search from anywhere</div>
+  </div>
+</div>
+
 <nav id="nav">
   <a class="brand" href="index.html"><span class="dot"></span><span>Sidel&nbsp;CREN<small>Carbon Resilient Energy Nexus</small></span></a>
   <button class="navtoggle" id="navtoggle" aria-label="Open menu" aria-expanded="false"><span></span></button>
@@ -88,12 +100,14 @@
         <a href="power-plant-waste-heat-recovery.html">Power Generation</a>
         <a href="steel-mill-waste-heat-recovery.html">Steel &amp; Metals</a>
         <a href="data-center-waste-heat-recovery.html">Data Centers</a>
+        <a href="concrete-plant-waste-heat-recovery.html">Concrete</a>
       </div>
     </div>
     <a href="case-studies.html">Case Studies</a>
     <a href="approach.html">Approach</a>
     <a href="leadership.html">Leadership</a>
     <a href="contact.html">Contact</a>
+    <button class="searchtoggle" id="searchtoggle" aria-label="Search the site" title="Search (press /)"><span></span></button>
     <a class="navcta" href="contact.html#audit-form">Book a Consultation</a>
   </div>
 </nav>
