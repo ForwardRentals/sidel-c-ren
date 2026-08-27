@@ -31,13 +31,27 @@ nav.solid{background:rgba(6,17,11,.85);border-color:var(--line)}
 .navtoggle span{display:block;width:18px;height:2px;background:var(--ink);position:relative}
 .navtoggle span::before,.navtoggle span::after{content:"";position:absolute;left:0;width:18px;height:2px;background:var(--ink)}
 .navtoggle span::before{top:-6px}.navtoggle span::after{top:6px}
+
+/* industries dropdown */
+.navdrop{position:relative}
+.navdrop-trigger{display:flex;align-items:center;gap:6px}
+.navdrop-trigger::after{content:"";width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg);margin-top:-3px;opacity:.65}
+.navdrop-menu{position:absolute;top:100%;left:-14px;margin-top:16px;min-width:230px;background:rgba(10,24,16,.98);border:1px solid var(--line);border-radius:14px;padding:8px;box-shadow:0 20px 50px rgba(0,0,0,.45);opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .15s,transform .15s,visibility .15s}
+.navdrop-menu::before{content:"";position:absolute;top:-16px;left:0;right:0;height:16px}
+.navdrop:hover .navdrop-menu,.navdrop:focus-within .navdrop-menu{opacity:1;visibility:visible;transform:translateY(0)}
+.navdrop-menu a{display:block;padding:10px 14px;border-radius:9px;font-size:.85rem;color:var(--muted);white-space:nowrap}
+.navdrop-menu a:hover{background:rgba(255,255,255,.06);color:var(--ink)}
+
 @media(max-width:1040px){
-  .navlinks{position:fixed;top:70px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:rgba(6,17,11,.97);border-bottom:1px solid var(--line);padding:8px 0;display:none}
+  .navlinks{position:fixed;top:70px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:rgba(6,17,11,.97);border-bottom:1px solid var(--line);padding:8px 0;display:none;max-height:calc(100vh - 70px);overflow-y:auto}
   .navlinks.open{display:flex}
   .navlinks a{padding:14px 28px;border-bottom:1px solid rgba(255,255,255,.05);font-size:.95rem}
   .navtoggle{display:flex}
   nav{background:rgba(6,17,11,.9)}
   .navlinks .navcta{display:block;width:calc(100% - 56px);margin:14px 28px 18px;text-align:center;border-bottom:none}
+  .navdrop-trigger{justify-content:space-between}
+  .navdrop-menu{position:static;opacity:1;visibility:visible;transform:none;margin-top:0;border:none;border-radius:0;background:rgba(255,255,255,.025);padding:0;box-shadow:none}
+  .navdrop-menu a{padding:12px 28px 12px 44px;font-size:.88rem}
 }
 
 /* hero */
@@ -289,6 +303,11 @@ section[id],.anchorblock{scroll-margin-top:90px}
 .checks li{list-style:none;border:1px solid var(--line);border-radius:14px;padding:16px 20px;background:var(--card);color:#ccdcd2;font-weight:300;font-size:.9rem}
 .checks li b{display:block;color:var(--ink);font-weight:600;font-size:.95rem;margin-bottom:4px}
 @media(max-width:760px){.checks{grid-template-columns:1fr}}
+
+/* cross-industry link row */
+.crosslinks{display:flex;flex-wrap:wrap;gap:10px;margin-top:40px}
+.crosslinks a{border:1px solid var(--line);border-radius:999px;padding:9px 18px;font-size:.82rem;color:var(--muted);background:var(--card);transition:border-color .2s,color .2s}
+.crosslinks a:hover{border-color:var(--green);color:var(--ink)}
 
 /* FreeSite Company footer credit */
 .legal a.fsc-credit{color:var(--green);font-weight:600;text-decoration:none;text-shadow:0 0 8px rgba(63,191,90,.75),0 0 20px rgba(63,191,90,.4);animation:fscGlow 2.8s ease-in-out infinite}

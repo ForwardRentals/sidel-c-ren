@@ -84,7 +84,16 @@
   <button class="navtoggle" id="navtoggle" aria-label="Open menu" aria-expanded="false"><span></span></button>
   <div class="navlinks" id="navlinks">
     <a href="index.html#system">The System</a>
-    <a href="industries.html" class="active">Industries</a>
+    <div class="navdrop">
+      <a href="industries.html" class="navdrop-trigger active">Industries</a>
+      <div class="navdrop-menu">
+        <a href="dairy-waste-heat-recovery.html">Dairy</a>
+        <a href="sugar-mill-waste-heat-recovery.html">Sugar Mill</a>
+        <a href="power-plant-waste-heat-recovery.html">Power Generation</a>
+        <a href="steel-mill-waste-heat-recovery.html">Steel &amp; Metals</a>
+        <a href="data-center-waste-heat-recovery.html">Data Centers</a>
+      </div>
+    </div>
     <a href="case-studies.html">Case Studies</a>
     <a href="approach.html">Approach</a>
     <a href="leadership.html">Leadership</a>
@@ -106,31 +115,31 @@
   <div class="kick reveal">Where the platform fits</div>
   <h2 class="reveal d1">Pick your plant.</h2>
   <div class="indgrid">
-    <a class="ind reveal d1" href="#dairy"><div class="bd">
+    <a class="ind reveal d1" href="dairy-waste-heat-recovery.html"><div class="bd">
       <div class="badge">Industry 01</div>
       <h3>🥛 Large Dairy</h3>
       <p>A 365-day heat-and-cooling machine: milk reception, chilling, pasteurisation, CIP, drying, cold storage, boilers, generators and effluent.</p>
       <div class="go">Dairy detail →</div>
     </div></a>
-    <a class="ind reveal d2" href="#sugar"><div class="bd">
+    <a class="ind reveal d2" href="sugar-mill-waste-heat-recovery.html"><div class="bd">
       <div class="badge">Industry 02</div>
       <h3>🌾 Sugar Mill</h3>
       <p>A thermal plant with a product attached — bagasse boilers, evaporation, batch pans, vacuum systems, spray ponds and condenser water.</p>
       <div class="go">Sugar detail →</div>
     </div></a>
-    <a class="ind reveal d3" href="#power"><div class="bd">
+    <a class="ind reveal d3" href="power-plant-waste-heat-recovery.html"><div class="bd">
       <div class="badge">Industry 03</div>
       <h3>⚡ Fossil Power — Gas &amp; Coal</h3>
       <p>Enormous value rejected through boiler and generator exhaust, condenser heat, cooling towers, blowdown and stack losses. Coal adds particulate.</p>
       <div class="go">Power detail →</div>
     </div></a>
-    <a class="ind reveal d4" href="#steel"><div class="bd">
+    <a class="ind reveal d4" href="steel-mill-waste-heat-recovery.html"><div class="bd">
       <div class="badge">Industry 04</div>
       <h3>🏗️ Steel &amp; Metals</h3>
       <p>The strongest long-term market — multiple high-grade and low-grade streams across furnaces, coke/sinter, EAF, rolling, quench and off-gas.</p>
       <div class="go">Steel detail →</div>
     </div></a>
-    <a class="ind reveal d1" href="#data-centers"><div class="bd">
+    <a class="ind reveal d1" href="data-center-waste-heat-recovery.html"><div class="bd">
       <div class="badge">Industry 05</div>
       <h3>💾 Data Centers</h3>
       <p>The fastest-growing electricity load in the country — cooling alone can be up to 80% of non-compute power draw, and liquid cooling is finally making that heat recoverable.</p>
@@ -143,108 +152,10 @@
   </div>
 </section>
 
-<!-- ============ DAIRY ============ -->
-<section class="block" id="dairy">
-  <div class="anchorblock">
-    <div class="badge reveal">Industry 01</div>
-    <h2 class="reveal d1">Large dairy:<br>heat and cold, all day, every day.</h2>
-    <p class="sub reveal d2">A large dairy runs 365 days a year and pays twice on nearly every process — once to heat the product, then again to cool it. Milk handling, chilling, pasteurisation, hot water, CIP, evaporation, drying, refrigeration, cold rooms, boilers, generators and effluent systems create exactly the thermal profile where SRU + RPC + TESS deliver value.</p>
-
-    <div class="tblwrap reveal">
-      <table class="tbl">
-        <tr><th>Planning basis</th><th>Reference value</th><th>What it implies</th></tr>
-        <tr><td>Milk handling capacity</td><td>3.0–3.5 million litres/day</td><td>High continuous cooling load; milk reception creates shock loads.</td></tr>
-        <tr><td>Steam demand</td><td>20–25 TPH — roughly 360–450 MWh(th)/day depending on steam conditions and schedule</td><td>Major boiler fuel and stack-loss opportunity; a strong candidate for SRU + TESS.</td></tr>
-        <tr><td>Refrigeration</td><td>~1,500 TR — roughly 24–36 MWh(e)/day of compressor power</td><td>TESS can buffer refrigeration peaks and cold-storage swings.</td></tr>
-        <tr><td>Current waste streams</td><td>Boiler stack losses, condensate losses, refrigeration condenser heat, cooling-tower rejection, pasteurisation heat/cool cycling, CIP and dryer exhaust</td><td>More than half of purchased energy may be rejected as waste heat or unmanaged cooling demand when thermal streams are not integrated.</td></tr>
-      </table>
-    </div>
-
-    <h3 class="reveal" style="margin-top:56px;font-size:1.35rem">Dairy waste-energy map</h3>
-    <div class="tblwrap reveal d1">
-      <table class="tbl">
-        <tr><th>Waste area</th><th>How the waste happens today</th><th>Technology response</th></tr>
-        <tr><td>Boiler &amp; steam</td><td>Stack losses, blowdown, condensate losses, cycling, steam traps, unbalanced hot-water loads.</td><td>SRU + TESS recover and buffer heat; RPC where solid fuel or particulate exhaust applies.</td></tr>
-        <tr><td>Pasteurisation</td><td>Product is heated then immediately cooled; repeated cycling creates load swings.</td><td>TESS stabilises hot/cold demand and shifts recovered heat to CIP or preheat.</td></tr>
-        <tr><td>Refrigeration &amp; cold storage</td><td>Compressor heat is rejected to condenser and cooling tower; peak loads drive demand charges.</td><td>TESS buffers chilled water and cold storage, and reduces compressor peaks.</td></tr>
-        <tr><td>Milk reception &amp; chilling</td><td>Incoming milk creates shock loads at reception and during peak procurement windows.</td><td>TESS acts as a thermal shock absorber for consistent chilling and product quality.</td></tr>
-        <tr><td>Drying / milk powder</td><td>Drying exhaust and heated air streams reject large amounts of heat.</td><td>Recover heat for preheat, staged drying-air use, or behind-the-meter conversion where heat quality allows.</td></tr>
-      </table>
-    </div>
-
-    <div class="note reveal">
-      <h5>Dairy — first pilot</h5>
-      <p>Select one high-load island: boiler, CIP, pasteurisation or refrigeration. Meter the baseline for 2–4 weeks, install a bypassable pilot, verify savings for 30–90 days, then scale once the cash, quality, water and reliability benefits are proven.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ============ SUGAR ============ -->
-<section class="block" id="sugar">
-  <div class="anchorblock">
-    <div class="badge reveal">Industry 02</div>
-    <h2 class="reveal d1">Sugar mill:<br>a thermal plant with a product attached.</h2>
-    <p class="sub reveal d2">Batch-pan crystallisation and condenser/spray-pond systems represent the largest concentration of recoverable and stabilisable thermal load in the mill. The reference case below is a 14,000 TCD mill on a 110-day season.</p>
-
-    <div class="tblwrap reveal">
-      <table class="tbl">
-        <tr><th>Reference item</th><th>Preliminary value</th><th>Meaning for deployment</th></tr>
-        <tr><td>Plant scale</td><td>14,000 TCD; 560 TPH average crushing; 110-day operating season</td><td>Large seasonal thermal and cooling load — a strong candidate for an instrumented pilot.</td></tr>
-        <tr><td>Boiler &amp; power</td><td>230 TPH boiler; 44 MW turbine; 41 MW generation; 26 MW export</td><td>Opportunity to stabilise process heat and improve internal energy use. Higher-temperature streams should be assessed for power conversion.</td></tr>
-        <tr><td>Batch-pan thermal load</td><td>132.8 MW(th) gross vapour load; 55.1 MW(th) recoverable/stabilisable under analysis assumptions</td><td>Value is strongest around condenser and spray-pond relief, vacuum stability, and process stabilisation.</td></tr>
-        <tr><td>Cooling / contact-water handling</td><td>13.26 million m³/season-equivalent reduction in recirculated and contact-water handling</td><td>This is <b>not</b> one-for-one fresh-water saving. Makeup, blowdown, evaporation and wastewater meters must confirm the real water benefit.</td></tr>
-        <tr><td>Pilot scale</td><td>4–6 TESS units on one representative pan; full batch-pan sizing is 48 TESS units</td><td>The pan pilot is the correct entry point — full mill deployment is a staged, financed programme, not a first step.</td></tr>
-      </table>
-    </div>
-
-    <h3 class="reveal" style="margin-top:56px;font-size:1.35rem">What changes on the floor</h3>
-    <ul class="checks reveal d1">
-      <li><b>Product</b>Steadier vacuum and thermal conditions can support improved crystal uniformity, fewer pan upsets, lower reprocessing and reduced product loss.</li>
-      <li><b>Energy</b>Recovered and stabilised thermal energy reduces avoidable steam burden and improves cycle stability, with power recovery where higher-temperature streams are integrated.</li>
-      <li><b>Water</b>Less condenser and spray-pond thermal burden reduces recirculated water handling, pumping energy, chemical load, blowdown and wastewater pressure.</li>
-      <li><b>Manpower &amp; inventory</b>Steadier strikes and fewer thermal upsets mean less manual intervention, less downtime response, lower WIP variability and fewer quality holds.</li>
-    </ul>
-
-    <div class="note reveal">
-      <h5>Sugar — first pilot</h5>
-      <p>Target one representative high-load or problem pan. Use 4–6 TESS units after a piping survey and strike profile, then meter vacuum stability, vapour flow, spray-pond temperature, pump kW, strike duration, crystal size, molasses purity, sugar recovery and wastewater.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ============ POWER ============ -->
-<section class="block" id="power">
-  <div class="anchorblock">
-    <div class="badge reveal">Industry 03</div>
-    <h2 class="reveal d1">Fossil-fuelled power:<br>gas and coal.</h2>
-    <p class="sub reveal d2">Power plants reject enormous value through boiler and generator exhaust, condenser heat, cooling towers, blowdown, stack losses and auxiliary systems. Where site conditions, fuel chemistry, emissions controls and independent measurement support it, this is a near-zero emissions opportunity — treated as an engineered project objective, not a regulatory guarantee, until it is demonstrated.</p>
-
-    <div class="tblwrap reveal">
-      <table class="tbl">
-        <tr><th>Case</th><th>Present setup &amp; waste</th><th>SRU / RPC / TESS response</th><th>Target outcome</th></tr>
-        <tr>
-          <td>500 MW gas plant</td>
-          <td>Example output 12,000 MWh/day; fuel input may exceed 22,000–25,000 MWh(th)/day depending on heat rate. Waste: stack heat, condenser and cooling load, turbine exhaust, auxiliary losses.</td>
-          <td>SRU captures exhaust heat and water-vapour value where chemistry permits. TESS stores and reuses heat, and converts sufficient-temperature heat to behind-the-meter power. No RPC unless a particulate or fuel condition requires it.</td>
-          <td>Target 7–10% fuel reduction and ~25% useful output increase where integration supports it, plus black-start TESS backup for key plant infrastructure.</td>
-        </tr>
-        <tr>
-          <td>500 MW coal plant</td>
-          <td>Example output 12,000 MWh/day; fuel input may exceed 30,000 MWh(th)/day. Waste: particulate exhaust, stack heat, condenser heat, ash and solids, cooling-tower burden, auxiliary loads.</td>
-          <td>RPC addresses the particulate-heavy exhaust. SRU captures heat and water-vapour value where chemistry permits. TESS stores and converts recoverable thermal streams. Greenhouse or compression/condensation pathways create public-facing value.</td>
-          <td>Near-zero emissions opportunity when combined with proper emissions controls; 7–10% fuel reduction target, ~25% net MWh increase target, and 40–60% cooling-water reduction target where engineered and validated.</td>
-        </tr>
-      </table>
-    </div>
-
-    <h3 class="reveal" style="margin-top:56px;font-size:1.35rem">Infrastructure effects</h3>
-    <ul class="checks reveal d1">
-      <li><b>Existing infrastructure used less</b>Cooling-tower duty cycles, condenser thermal burden, auxiliary pumping, stack losses, fuel burn per net MWh, and diesel dependency for black-start functions.</li>
-      <li><b>New infrastructure added</b>TESS modules, SRU heat-recovery blocks, RPC particulate capture for solid fuels, heat exchangers, ducting, condensate treatment, controls, ORC/binary-cycle interfaces and measurement systems.</li>
-      <li><b>Black-start value</b>TESS can supply behind-the-meter backup from stored thermal energy for control systems, pumps, critical auxiliaries, communications and restart-support infrastructure — where the system is engineered for that duty.</li>
-      <li><b>Commercial approach</b>Start with a measured 5–10 MW pilot rather than a 500 MW full-plant commitment. Prove metered fuel, water, output, emissions and uptime before scaling.</li>
-    </ul>
-  </div>
+<section class="block tight">
+  <div class="kick reveal">Full detail, industry by industry</div>
+  <h2 class="reveal d1">Each industry now has its own page.</h2>
+  <p class="sub reveal d2">Planning-basis figures, the waste-energy map, first-pilot approach and the exact data we'd ask for &mdash; on its own page for <a href="dairy-waste-heat-recovery.html" style="color:var(--green2)">dairy</a>, <a href="sugar-mill-waste-heat-recovery.html" style="color:var(--green2)">sugar mills</a>, <a href="power-plant-waste-heat-recovery.html" style="color:var(--green2)">gas &amp; coal power</a>, <a href="steel-mill-waste-heat-recovery.html" style="color:var(--green2)">steel &amp; metals</a>, and <a href="data-center-waste-heat-recovery.html" style="color:var(--green2)">data centers</a>. Pick a card above, or a menu link, to go straight there.</p>
 </section>
 
 <div class="showcase">
@@ -252,70 +163,9 @@
   <div class="cap">
     <div class="kick reveal">The coal end-state</div>
     <h2 class="reveal d1">Emissions transformed,<br>not just permitted.</h2>
-    <p class="sub reveal d2">RPC removes the solid pollutants. SRU and TESS strip the Btus across an 800°F-to-122°F cascade and convert what qualifies into behind-the-meter electricity. What remains — CO₂ and water vapour — becomes the input to a greenhouse complex producing food year-round.</p>
+    <p class="sub reveal d2">RPC removes the solid pollutants. SRU and TESS strip the Btus across an 800°F-to-122°F cascade and convert what qualifies into behind-the-meter electricity. What remains — CO₂ and water vapour — becomes the input to a greenhouse complex producing food year-round. More on the <a href="power-plant-waste-heat-recovery.html" style="color:var(--green2)">power generation page</a>.</p>
   </div>
 </div>
-
-<!-- ============ STEEL ============ -->
-<section class="block" id="steel">
-  <div class="anchorblock" style="border-top:0;padding-top:0;margin-top:0">
-    <div class="badge reveal">Industry 04</div>
-    <h2 class="reveal d1">Steel &amp; metals:<br>the deepest heat map of all.</h2>
-    <p class="sub reveal d2">Steel and metals facilities are among the strongest long-term markets because they contain multiple high-grade and low-grade thermal streams at once — furnaces, reheating, coke and sinter, hot rolling, EAF, heat treatment, boilers, gas cleaning, off-gas, dust collection, quench and cooling loops, cooling towers and wastewater systems.</p>
-
-    <div class="tblwrap reveal">
-      <table class="tbl">
-        <tr><th>Area</th><th>Waste or pain point</th><th>Technology fit</th><th>Expected result to measure</th></tr>
-        <tr><td>Furnaces / reheating / hot rolling</td><td>High-temperature exhaust and radiant losses; repeated heating and thermal cycling.</td><td>TESS + heat exchangers; SRU where exhaust chemistry permits.</td><td>Reduced fuel per tonne, recovered heat for preheat and process use, steadier throughput, fewer thermal shocks.</td></tr>
-        <tr><td>Coke / sinter / solid-fuel operations</td><td>Particulate-heavy exhaust, visible emissions, ash and solids, heat rejection.</td><td>RPC + SRU/TESS integration after an emissions chemistry review.</td><td>Particulate capture, lower visible emissions, heat recovery, and possible by-product handling value.</td></tr>
-        <tr><td>EAF / electric-intensive operations</td><td>Large electrical peaks, off-gas heat, cooling-water stress and downtime risk.</td><td>TESS for thermal buffering and power recovery; ORC/binary cycle where heat quality supports it.</td><td>Peak reduction, recovered energy value, cooling-water relief, and resilience.</td></tr>
-        <tr><td>Cooling / quench / water systems</td><td>High water throughput, evaporation, blowdown, treatment cost, thermal pollution and pump load.</td><td>TESS plus system redesign to reduce thermal rejection and reuse heat.</td><td>Water savings, lower pumping power, reduced chemical and treatment burden.</td></tr>
-        <tr><td>Dust collection / boiler house / utilities</td><td>Particulate and stack losses; inefficient utility support systems.</td><td>RPC for particulates, SRU for suitable flue gas, TESS for storage and reuse.</td><td>Cleaner utility operation, lower fuel use, less wasted energy.</td></tr>
-      </table>
-    </div>
-
-    <div class="note reveal">
-      <h5>Steel &amp; metals — first pilot</h5>
-      <p>Start with a mapped heat-stream pilot: 5–10 TESS plus 1–2 SRU/RPC blocks depending on furnace, boiler, fuel and exhaust chemistry. Full-site economics are only presented after the actual waste-heat streams, cooling systems, particulate sources and operating priorities have been mapped.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ============ DATA CENTERS ============ -->
-<section class="block" id="data-centers">
-  <div class="anchorblock">
-    <div class="badge reveal">Industry 05</div>
-    <h2 class="reveal d1">Data centers:<br>the fastest-growing thermal load in the country.</h2>
-    <p class="sub reveal d2">Nearly every kilowatt-hour a data center draws eventually becomes heat. Lawrence Berkeley National Laboratory puts U.S. data-center electricity use at 176 TWh in 2023, with a 2030 reference case as high as 649 TWh. Cooling alone can account for up to 80% of everything beyond the compute load itself. As liquid and two-phase cooling push exit temperatures above 122°F, that heat stops being waste and becomes recoverable.</p>
-
-    <div class="tblwrap reveal">
-      <table class="tbl">
-        <tr><th>Planning basis</th><th>Reference value</th><th>What it implies</th></tr>
-        <tr><td>U.S. market scale</td><td>176 TWh of data-center electricity in 2023 (LBNL), trending toward a 2030 reference case near 649 TWh</td><td>A genuinely national-scale thermal resource, not a niche application.</td></tr>
-        <tr><td>Cooling share of load</td><td>Industry-average PUE ~1.4; cooling reaching up to 80% of non-compute load, and 33–40% of total site electricity at some facilities (DOE)</td><td>Cooling electricity is the single largest controllable value stream in most sites.</td></tr>
-        <tr><td>Heat quality</td><td>Advanced liquid and two-phase cooling raises exit temperatures above 122°F (50°C)</td><td>This is the same threshold TESS is built to capture across every Sidel CREN application.</td></tr>
-        <tr><td>Water exposure</td><td>Evaporative cooling towers remain common at scale</td><td>Sites in water-stressed or permitting-sensitive regions carry real water-reduction upside.</td></tr>
-      </table>
-    </div>
-
-    <h3 class="reveal" style="margin-top:56px;font-size:1.35rem">Where TESS fits in a data center</h3>
-    <div class="tblwrap reveal d1">
-      <table class="tbl">
-        <tr><th>Waste area</th><th>How the waste happens today</th><th>Technology response</th></tr>
-        <tr><td>Chiller &amp; cooling-tower load</td><td>Compressor work, tower fan/pump duty and dry-cooler operation run continuously to reject heat the moment it's produced.</td><td>TESS intercepts heat before final rejection, buffering it and cutting chiller/tower run time.</td></tr>
-        <tr><td>Evaporative water use</td><td>Cooling towers consume significant makeup water, especially in warm or dry climates.</td><td>Time-shifting and reducing tower duty lowers evaporative water demand directly.</td></tr>
-        <tr><td>Power-envelope limits</td><td>Sites with constrained grid interconnection can't add compute even when cooling capacity nominally allows it.</td><td>Every MW of cooling load avoided can be reassigned to revenue-generating compute within the same interconnection.</td></tr>
-        <tr><td>Outage &amp; resilience risk</td><td>Backup relies on diesel generation and battery UPS alone.</td><td>TESS thermal storage can support black-start and critical-load backup functions where engineered for that duty.</td></tr>
-        <tr><td>Stranded low-grade heat</td><td>Liquid-loop return heat above 122°F is rejected rather than reused or converted.</td><td>Where temperature and site conditions support it, TESS + ORC converts a portion to behind-the-meter power.</td></tr>
-      </table>
-    </div>
-
-    <div class="note reveal">
-      <h5>Data centers — first pilot</h5>
-      <p>Best fit: AI/HPC campuses running direct-to-chip or immersion cooling with return temperatures approaching or exceeding 122°F, especially where interconnection, water, or electricity cost is a binding constraint. Start with an instrumentation audit — liquid-loop temperatures and flow, chiller/tower kW, IT load, and water balance — then a 1–2 unit pilot to measure actual cooling-kWh displacement, water displacement and net output before any site-wide commitment.</p>
-    </div>
-  </div>
-</section>
 
 <!-- ============ CROSS-INDUSTRY ============ -->
 <section class="block">
@@ -367,7 +217,7 @@
     <div class="col" style="max-width:330px">
       <a class="brand" href="index.html" style="margin-bottom:14px"><span class="dot"></span><span>Sidel CREN<small>Carbon Resilient Energy Nexus</small></span></a>
       <p>Carbon Resilient Energy NEXUS,&nbsp;Inc. DBA Sidel&nbsp;CREN.</p>
-      <p>Sidel Systems USA &times; SAI-DEL / Sidel Systems India &times; Smart Phases / Novacab.</p>
+      <p><a href="https://sidelsystems.com" target="_blank" rel="noopener" style="color:inherit">Sidel Systems USA</a> &times; SAI-DEL / Sidel Systems India &times; <a href="https://novacab.us" target="_blank" rel="noopener" style="color:inherit">Smart Phases / Novacab</a>.</p>
       <p style="color:#7d9187">Stop the Waste. Power the Future.</p>
     </div>
     <div class="col">

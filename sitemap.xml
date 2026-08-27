@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://sidelcren.com/</loc><priority>1.0</priority></url>
   <url><loc>https://sidelcren.com/industries.html</loc><priority>0.9</priority></url>
+  <url><loc>https://sidelcren.com/dairy-waste-heat-recovery.html</loc><priority>0.85</priority></url>
+  <url><loc>https://sidelcren.com/sugar-mill-waste-heat-recovery.html</loc><priority>0.85</priority></url>
+  <url><loc>https://sidelcren.com/power-plant-waste-heat-recovery.html</loc><priority>0.85</priority></url>
+  <url><loc>https://sidelcren.com/steel-mill-waste-heat-recovery.html</loc><priority>0.85</priority></url>
+  <url><loc>https://sidelcren.com/data-center-waste-heat-recovery.html</loc><priority>0.85</priority></url>
   <url><loc>https://sidelcren.com/case-studies.html</loc><priority>0.9</priority></url>
   <url><loc>https://sidelcren.com/approach.html</loc><priority>0.8</priority></url>
   <url><loc>https://sidelcren.com/sru.html</loc><priority>0.8</priority></url>
