@@ -83,6 +83,60 @@ document.addEventListener('keydown',e=>{
   }
 });
 
+// chat widget
+const CHAT_ENDPOINT = "https://sidel-cren-chat.thefulltimehobby.workers.dev";
+const cbtn=document.getElementById('chatbtn'),cpanel=document.getElementById('chatpanel'),cclose=document.getElementById('chatclose'),cmsgs=document.getElementById('chatmsgs'),cform=document.getElementById('chatform'),cinput=document.getElementById('chatinput');
+let chatHistory=[];
+function addChatMsg(role,text){
+  const el=document.createElement('div');
+  el.className='cmsg '+(role==='user'?'user':'bot');
+  el.textContent=text;
+  cmsgs.appendChild(el);
+  cmsgs.scrollTop=cmsgs.scrollHeight;
+  return el;
+}
+function addChatTyping(){
+  const el=document.createElement('div');
+  el.className='cmsg typing';
+  el.innerHTML='<span></span><span></span><span></span>';
+  cmsgs.appendChild(el);
+  cmsgs.scrollTop=cmsgs.scrollHeight;
+  return el;
+}
+if(cbtn&&cpanel){
+  cbtn.addEventListener('click',()=>{
+    cpanel.classList.toggle('open');
+    if(cpanel.classList.contains('open'))setTimeout(()=>cinput&&cinput.focus(),10);
+  });
+}
+if(cclose)cclose.addEventListener('click',()=>cpanel.classList.remove('open'));
+if(cform){
+  cform.addEventListener('submit', async e=>{
+    e.preventDefault();
+    const text=cinput.value.trim();
+    if(!text)return;
+    addChatMsg('user',text);
+    chatHistory.push({role:'user',content:text});
+    cinput.value='';
+    cinput.disabled=true;
+    const typingEl=addChatTyping();
+    try{
+      const res=await fetch(CHAT_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages:chatHistory})});
+      const out=await res.json();
+      typingEl.remove();
+      if(!res.ok||!out.reply)throw new Error((out&&out.error)||'Something went wrong');
+      addChatMsg('bot',out.reply);
+      chatHistory.push({role:'assistant',content:out.reply});
+    }catch(err){
+      typingEl.remove();
+      addChatMsg('bot',"Sorry, I'm having trouble right now — try again, or reach us directly at michaellogan@sidelcren.com.");
+    }finally{
+      cinput.disabled=false;
+      cinput.focus();
+    }
+  });
+}
+
 // reveal on scroll
 const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.16});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
