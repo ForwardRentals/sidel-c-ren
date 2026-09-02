@@ -85,7 +85,8 @@ document.addEventListener('keydown',e=>{
 
 // chat widget
 const CHAT_ENDPOINT = "https://sidel-cren-chat.thefulltimehobby.workers.dev";
-const LEADS_ENDPOINT = "https://sidel-cren-leads.thefulltimehobby.workers.dev"; // confirm this matches the deployed Worker URL
+// The inline lead form posts to CHAT_ENDPOINT + "/lead" (below), never
+// straight to the CRM backend — that keeps its ingest key server-side only.
 const cbtn=document.getElementById('chatbtn'),cpanel=document.getElementById('chatpanel'),cclose=document.getElementById('chatclose'),cmsgs=document.getElementById('chatmsgs'),cform=document.getElementById('chatform'),cinput=document.getElementById('chatinput');
 let chatHistory=[];
 let chatFormShown=false;
@@ -143,8 +144,8 @@ function addChatLeadForm(){
     btn.disabled=true;
     btn.textContent='Sending…';
     try{
-      const res=await fetch(LEADS_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({
-        source:'chatbot-form', name, email, phone, message:topic, transcript:chatHistory
+      const res=await fetch(CHAT_ENDPOINT+'/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({
+        name, email, phone, message:topic, transcript:chatHistory
       })});
       const out=await res.json();
       if(!res.ok||!out.ok)throw new Error((out&&out.error)||'Something went wrong');
