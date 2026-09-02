@@ -85,8 +85,11 @@ document.addEventListener('keydown',e=>{
 
 // chat widget
 const CHAT_ENDPOINT = "https://sidel-cren-chat.thefulltimehobby.workers.dev";
+const LEADS_ENDPOINT = "https://sidel-cren-leads.thefulltimehobby.workers.dev"; // confirm this matches the deployed Worker URL
 const cbtn=document.getElementById('chatbtn'),cpanel=document.getElementById('chatpanel'),cclose=document.getElementById('chatclose'),cmsgs=document.getElementById('chatmsgs'),cform=document.getElementById('chatform'),cinput=document.getElementById('chatinput');
 let chatHistory=[];
+let chatFormShown=false;
+let chatLeadFiled=false;
 function addChatMsg(role,text){
   const el=document.createElement('div');
   el.className='cmsg '+(role==='user'?'user':'bot');
@@ -102,6 +105,58 @@ function addChatTyping(){
   cmsgs.appendChild(el);
   cmsgs.scrollTop=cmsgs.scrollHeight;
   return el;
+}
+function addChatLeadForm(){
+  chatFormShown=true;
+  const wrap=document.createElement('div');
+  wrap.className='cmsg bot leadform';
+  wrap.innerHTML=`
+    <div class="leadform-intro">Happy to pass this straight to the team — leave your details and what you'd like to discuss:</div>
+    <input type="text" class="lf-name" placeholder="Your name" autocomplete="name">
+    <input type="email" class="lf-email" placeholder="Your email" autocomplete="email">
+    <input type="tel" class="lf-phone" placeholder="Phone (optional)" autocomplete="tel">
+    <textarea class="lf-topic" placeholder="What would you like to talk about?"></textarea>
+    <div class="leadform-actions">
+      <button type="button" class="leadform-skip">Maybe later</button>
+      <button type="button" class="leadform-submit">Send to the team</button>
+    </div>
+    <div class="leadform-msg"></div>
+  `;
+  cmsgs.appendChild(wrap);
+  cmsgs.scrollTop=cmsgs.scrollHeight;
+
+  const msgEl=wrap.querySelector('.leadform-msg');
+  wrap.querySelector('.leadform-skip').addEventListener('click',()=>{
+    wrap.remove();
+  });
+  wrap.querySelector('.leadform-submit').addEventListener('click', async ()=>{
+    const name=wrap.querySelector('.lf-name').value.trim();
+    const email=wrap.querySelector('.lf-email').value.trim();
+    const phone=wrap.querySelector('.lf-phone').value.trim();
+    const topic=wrap.querySelector('.lf-topic').value.trim();
+    if(!name||!email||!email.includes('@')){
+      msgEl.textContent='Please add your name and a valid email.';
+      msgEl.className='leadform-msg show err';
+      return;
+    }
+    const btn=wrap.querySelector('.leadform-submit');
+    btn.disabled=true;
+    btn.textContent='Sending…';
+    try{
+      const res=await fetch(LEADS_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({
+        source:'chatbot-form', name, email, phone, message:topic, transcript:chatHistory
+      })});
+      const out=await res.json();
+      if(!res.ok||!out.ok)throw new Error((out&&out.error)||'Something went wrong');
+      chatLeadFiled=true;
+      wrap.innerHTML='<div class="leadform-intro">Thanks — Michael will follow up shortly.</div>';
+    }catch(err){
+      msgEl.textContent="Couldn't send that — try again, or email michaellogan@sidelcren.com directly.";
+      msgEl.className='leadform-msg show err';
+      btn.disabled=false;
+      btn.textContent='Send to the team';
+    }
+  });
 }
 if(cbtn&&cpanel){
   cbtn.addEventListener('click',()=>{
@@ -121,12 +176,14 @@ if(cform){
     cinput.disabled=true;
     const typingEl=addChatTyping();
     try{
-      const res=await fetch(CHAT_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages:chatHistory})});
+      const res=await fetch(CHAT_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages:chatHistory, formShown:chatFormShown, leadFiled:chatLeadFiled})});
       const out=await res.json();
       typingEl.remove();
       if(!res.ok||!out.reply)throw new Error((out&&out.error)||'Something went wrong');
       addChatMsg('bot',out.reply);
       chatHistory.push({role:'assistant',content:out.reply});
+      if(out.leadCaptured)chatLeadFiled=true;
+      if(out.showContactForm&&!chatFormShown)addChatLeadForm();
     }catch(err){
       typingEl.remove();
       addChatMsg('bot',"Sorry, I'm having trouble right now — try again, or reach us directly at michaellogan@sidelcren.com.");
