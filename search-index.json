@@ -16,5 +16,6 @@
   {"title":"Case Studies", "url":"case-studies.html", "category":"Company", "desc":"Novacab TESS at IBM's Bromont facility, and the SRU flue-gas condenser at E&J Gallo Winery and Darigold dairy."},
   {"title":"Our Approach", "url":"approach.html", "category":"Company", "desc":"Capture, store, reuse and convert — delivered through a metered, pilot-first process that proves savings before anyone scales."},
   {"title":"Leadership & Alliance", "url":"leadership.html", "category":"Company", "desc":"Sidel Systems USA, SAI-DEL / Sidel Systems India, and Smart Phases / Novacab — the inventors and operators behind the platform."},
-  {"title":"Contact Sidel CREN", "url":"contact.html", "category":"Company", "desc":"Request a consultation, a data package, or a bankable pilot for your dairy, sugar mill, power plant or steel facility."}
+  {"title":"Contact Sidel CREN", "url":"contact.html", "category":"Company", "desc":"Request a consultation, a data package, or a bankable pilot for your dairy, sugar mill, power plant or steel facility."},
+  {"title":"Frequently Asked Questions", "url":"faq.html", "category":"Company", "desc":"Boiler heat loss, particulate control alternatives, cooling tower energy, waste heat to power, and ROI — the questions industrial teams actually search for."}
 ]
