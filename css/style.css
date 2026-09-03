@@ -331,6 +331,11 @@ section[id],.anchorblock{scroll-margin-top:90px}
 .note.warm{border-left-color:var(--heat2)}
 .note.warm h5{color:var(--heat2)}
 
+/* ---------- video embed ---------- */
+.videowrap{position:relative;width:100%;padding-top:56.25%;border-radius:20px;overflow:hidden;background:#000;margin-top:40px;border:1px solid var(--line)}
+.videowrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.videocap{margin-top:14px;color:var(--muted);font-weight:300;font-size:.92rem}
+
 /* ---------- contact ---------- */
 .contactgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:46px}
 .ccard{border:1px solid var(--line);border-radius:20px;padding:32px;background:linear-gradient(180deg,var(--card),transparent)}
