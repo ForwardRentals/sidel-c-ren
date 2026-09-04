@@ -209,7 +209,10 @@ const cio=new IntersectionObserver(es=>{es.forEach(e=>{
 })},{threshold:.6});
 document.querySelectorAll('[data-count]').forEach(el=>cio.observe(el));
 
-// lead form — posts straight to Web3Forms, which emails Michael Logan directly
+// lead form — files into the Sidel CREN CRM (via the chat Worker's /lead
+// relay, so the ingest key stays server-side, never in this browser JS) and
+// emails Michael Logan directly through Web3Forms, in parallel. Either path
+// succeeding is enough to tell the visitor it went through.
 const WEB3FORMS_ACCESS_KEY = "98a0a540-06c8-40fb-a156-5d4c6821a5a4";
 const leadform = document.getElementById('leadform');
 if (leadform) {
@@ -218,30 +221,50 @@ if (leadform) {
     const btn = document.getElementById('lf-submit');
     const msg = document.getElementById('lf-msg');
     const data = Object.fromEntries(new FormData(leadform).entries());
-    data.access_key = WEB3FORMS_ACCESS_KEY;
-    data.subject = `Sidel CREN — Consultation Request from ${data.name || 'website visitor'}`;
+    if (data.website) return; // honeypot tripped — silently drop, no response needed
     btn.disabled = true;
     const originalLabel = btn.textContent;
     btn.textContent = 'Sending…';
     msg.className = 'formmsg';
-    try {
-      const res = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify(data),
-      });
+
+    const crmSend = fetch(CHAT_ENDPOINT + '/lead', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        source: 'website-contact-form',
+        name: data.name, email: data.email, phone: data.phone,
+        company: data.company, industry: data.industry, message: data.message,
+      }),
+    }).then(async (res) => {
       const out = await res.json();
-      if (!res.ok || !out.success) throw new Error(out.message || 'Something went wrong');
+      if (!res.ok || !out.ok) throw new Error('crm ingest failed');
+    });
+
+    const emailSend = fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        ...data,
+        access_key: WEB3FORMS_ACCESS_KEY,
+        subject: `Sidel CREN — Consultation Request from ${data.name || 'website visitor'}`,
+      }),
+    }).then(async (res) => {
+      const out = await res.json();
+      if (!res.ok || !out.success) throw new Error('web3forms failed');
+    });
+
+    const [crmResult, emailResult] = await Promise.allSettled([crmSend, emailSend]);
+
+    if (crmResult.status === 'fulfilled' || emailResult.status === 'fulfilled') {
       leadform.reset();
       msg.textContent = "Thanks — we've got it. We'll follow up shortly.";
       msg.className = 'formmsg show ok';
-    } catch (err) {
+    } else {
       msg.textContent = "Couldn't send that automatically — please email michaellogan@sidelcren.com or call (805) 462-1250 instead.";
       msg.className = 'formmsg show err';
-    } finally {
-      btn.disabled = false;
-      btn.textContent = originalLabel;
     }
+    btn.disabled = false;
+    btn.textContent = originalLabel;
   });
 }
 
