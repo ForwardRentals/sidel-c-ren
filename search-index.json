@@ -22,5 +22,6 @@
   {"title": "How much heat does a boiler lose up the stack?", "url": "boiler-stack-heat-loss.html", "category": "Blog", "desc": "Estimating boiler stack loss from stack temperature, the hidden latent heat in water vapour, and what recovers it."},
   {"title": "Condensing vs. standard economizers", "url": "condensing-economizer-vs-standard-economizer.html", "category": "Blog", "desc": "How a flue gas condenser recovers latent heat and water below the dew point, and what heat sink it needs."},
   {"title": "Can data center waste heat be reused?", "url": "data-center-waste-heat-reuse.html", "category": "Blog", "desc": "District heating, liquid cooling temperatures, storage and the hard parts of reusing data center heat."},
-  {"title": "Can waste heat be turned into electricity?", "url": "waste-heat-to-electricity-orc.html", "category": "Blog", "desc": "Organic Rankine Cycle explained: how it works, realistic efficiency by temperature, and when it makes sense."}
+  {"title": "Can waste heat be turned into electricity?", "url": "waste-heat-to-electricity-orc.html", "category": "Blog", "desc": "Organic Rankine Cycle explained: how it works, realistic efficiency by temperature, and when it makes sense."},
+  {"title": "Baghouse vs. ESP vs. rotary collector", "url": "baghouse-vs-esp-vs-rotary-particulate-collector.html", "category": "Blog", "desc": "How baghouses, electrostatic precipitators and rotary collectors work, where each struggles, and the questions that decide the right choice."}
 ]

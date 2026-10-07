@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baghouse vs ESP vs Rotary Collector — Sidel CREN</title>
+<link rel="icon" type="image/png" href="assets/cren-logo.png">
+<meta name="description" content="Baghouse, electrostatic precipitator or rotary collector? How each works, where each struggles, and the questions that decide the right choice for your plant.">
+<link rel="canonical" href="https://sidelcren.com/baghouse-vs-esp-vs-rotary-particulate-collector.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Sidel CREN">
+<meta property="og:title" content="Baghouse vs ESP vs Rotary Collector — Sidel CREN">
+<meta property="og:description" content="Baghouse, electrostatic precipitator or rotary collector? How each works, where each struggles, and the questions that decide the right choice for your plant.">
+<meta property="og:url" content="https://sidelcren.com/baghouse-vs-esp-vs-rotary-particulate-collector.html">
+<meta property="og:image" content="https://sidelcren.com/assets/rpc-diagram.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Baghouse vs ESP vs Rotary Collector — Sidel CREN">
+<meta name="twitter:description" content="Baghouse, electrostatic precipitator or rotary collector? How each works, where each struggles, and the questions that decide the right choice for your plant.">
+<meta name="twitter:image" content="https://sidelcren.com/assets/rpc-diagram.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;700&family=Sora:wght@300;400;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BlogPosting",
+ "headline": "Baghouse vs Electrostatic Precipitator vs Rotary Particulate Collector: How to Choose",
+ "description": "Baghouse, electrostatic precipitator or rotary collector? How each works, where each struggles, and the questions that decide the right choice for your plant.",
+ "image": "https://sidelcren.com/assets/rpc-diagram.jpg",
+ "datePublished": "2026-10-07",
+ "dateModified": "2026-10-07",
+ "author": {
+  "@type": "Organization",
+  "name": "Sidel CREN",
+  "url": "https://sidelcren.com/",
+  "logo": {
+   "@type": "ImageObject",
+   "url": "https://sidelcren.com/assets/sidel-cren-logo.jpg"
+  }
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Sidel CREN",
+  "url": "https://sidelcren.com/",
+  "logo": {
+   "@type": "ImageObject",
+   "url": "https://sidelcren.com/assets/sidel-cren-logo.jpg"
+  }
+ },
+ "mainEntityOfPage": {
+  "@type": "WebPage",
+  "@id": "https://sidelcren.com/baghouse-vs-esp-vs-rotary-particulate-collector.html"
+ }
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://sidelcren.com/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Blog",
+   "item": "https://sidelcren.com/blog.html"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "Baghouse vs ESP vs rotary particulate collector",
+   "item": "https://sidelcren.com/baghouse-vs-esp-vs-rotary-particulate-collector.html"
+  }
+ ]
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "How do I choose between a baghouse, an ESP and a rotary particulate collector?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Start with the dust and the gas. Check particle resistivity, gas temperature and moisture, dew point, and your emission limit. Baghouses struggle with moist gas. Electrostatic precipitators struggle with dust resistivity outside their working range. A rotary particulate collector is a barrier device with a self-cleaning disc, so it does not depend on dust charge, and Sidel CREN sizes it only after a metered baseline."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Why can't baghouses run on wet or condensing flue gas?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "EPA's fact sheet says fabric filters cannot be operated in moist environments, because condensation can cause caking or plugging of the fabric. The gas has to stay above the dew point of any condensable in the stream, which also limits how much heat you can pull out of it upstream."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What dust resistivity is a problem for an electrostatic precipitator?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "EPA's cost manual says back corona is prevalent above about 2 x 10^11 ohm-cm, which sharply cuts collection ability. Below about 10^8 ohm-cm, particles are held so loosely that re-entrainment becomes much more severe. Resistivity also shifts with temperature, moisture and gas composition."
+   }
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<div id="prog"></div>
+
+<div class="searchmodal" id="searchmodal" role="dialog" aria-modal="true" aria-label="Search Sidel CREN">
+  <div class="searchbox">
+    <div class="si-row">
+      <span class="si-icon"></span>
+      <input type="text" id="searchinput" placeholder="Search industries, RPC, SRU, ASHRAE, data centers…" autocomplete="off">
+      <button class="searchclose" id="searchclose">Esc</button>
+    </div>
+    <div class="searchresults" id="searchresults"></div>
+    <div class="searchhint">Press <kbd>/</kbd> to search from anywhere</div>
+  </div>
+</div>
+
+<nav id="nav">
+  <a class="brand" href="index.html"><span class="wm">Sidel C<b>R</b>EN<small>Carbon <b>Resilient Energy</b> Nexus, Inc dba Sidel C<b>R</b>EN</small></span></a>
+  <button class="navtoggle" id="navtoggle" aria-label="Open menu" aria-expanded="false"><span></span></button>
+  <div class="navlinks" id="navlinks">
+    <div class="navdrop">
+      <a href="index.html#system" class="navdrop-trigger">The System</a>
+      <div class="navdrop-menu">
+        <a href="rotary-particulate-collector.html">RPC Particulate Collector</a>
+        <a href="flue-gas-condenser-heat-recovery.html">SRU Flue Gas Condenser</a>
+        <a href="tess-thermal-energy-storage.html">Novacab TESS Storage</a>
+        <a href="orc-waste-heat-to-power.html">ORC + Turbine Power</a>
+        <a href="greenhouse-co2-reuse.html">Greenhouse &amp; Clean Stack</a>
+      </div>
+    </div>
+    <div class="navdrop">
+      <a href="industries.html" class="navdrop-trigger">Industries</a>
+      <div class="navdrop-menu">
+        <a href="dairy-waste-heat-recovery.html">Dairy</a>
+        <a href="sugar-mill-waste-heat-recovery.html">Sugar Mill</a>
+        <a href="power-plant-waste-heat-recovery.html">Power Generation</a>
+        <a href="steel-mill-waste-heat-recovery.html">Steel &amp; Metals</a>
+        <a href="data-center-waste-heat-recovery.html">Data Centers</a>
+        <a href="concrete-plant-waste-heat-recovery.html">Concrete</a>
+        <a href="community-microgrid-cst-tess.html">Micro Grid</a>
+      </div>
+    </div>
+    <a href="case-studies.html">Case Studies</a>
+    <a href="approach.html">Approach</a>
+    <a href="faq.html">FAQ</a>
+    <a href="leadership.html">Leadership</a>
+    <a href="contact.html">Contact</a>
+    <button class="searchtoggle" id="searchtoggle" aria-label="Search the site" title="Search (press /)"><span></span></button>
+    <a class="navcta" href="contact.html#audit-form">Book a Consultation</a>
+  </div>
+</nav>
+
+<header class="hero short" id="top">
+  <div class="hero-bg"><img src="assets/rpc-diagram.jpg" alt="Diagram of the Sidel rotary particulate collector"></div>
+  <div class="hero-inner">
+    <span class="eyebrow">PARTICULATE CONTROL</span>
+    <h1>Baghouse, ESP or rotary collector:<br><span class="grad">how to choose.</span></h1>
+    <p class="lead">Three ways to take dust out of flue gas, each with a different weak spot. Here is how they work, where each one struggles, and the questions that decide the right fit.</p>
+  </div>
+</header>
+
+<article class="post">
+<div class="meta"><a href="blog.html" style="text-decoration:none"><b>Sidel CREN Blog</b></a> &middot; October 7, 2026 &middot; Particulate control</div>
+
+<div class="answer"><h5>The short answer</h5>
+<p>Let the dust and the gas decide. <b>Baghouses</b> filter well but dislike moist gas. <b>Electrostatic precipitators (ESPs)</b> work best when dust resistivity sits in a middle range. A <b>rotary particulate collector</b> is a self-cleaning barrier device that does not rely on dust charge. Measure resistivity, gas temperature, dew point and loading first, then compare.</p></div>
+
+<p>Most plants pick particulate control once and live with it for decades. That makes the choice worth getting right. The three main options sound similar on a brochure. In the stack they behave very differently.</p>
+<p>This post compares the technology categories in plain terms. It does not rank brands, and it does not give you a single winner. The right answer depends on your fuel, your dust and your emission limit.</p>
+
+<h2>How each one works</h2>
+<h3>Baghouse (fabric filter)</h3>
+<p>Flue gas passes through fabric bags. Dust sticks to the cloth by sieving and other effects. The dust cake that builds up on the fabric actually raises collection efficiency. Periodic cleaning knocks the cake off into a hopper.</p>
+<p>EPA's fact sheet says typical new baghouses are designed for <b>99 to 99.9 percent</b> collection efficiency, and older units run at 95 to 99.9 percent in practice. Those are design figures for well-run equipment, not a promise for your site.</p>
+
+<h3>Electrostatic precipitator (ESP)</h3>
+<p>Wires charge the particles with an electric field. The charged particles are pulled onto collecting plates. Rappers shake the plates so the dust falls into hoppers.</p>
+<p>It is a proven design for large gas flows. But it depends on electrical behaviour of the dust, and that varies from fuel to fuel.</p>
+
+<h3>Rotary particulate collector</h3>
+<p>The <a href="rotary-particulate-collector.html">Sidel Rotary Particulate Collector (RPC)</a> is a barrier-type collector. A rotating collection disc intercepts particles, and a self-cleaning mechanism keeps the screen face clear. It has one main moving part, with no plates, rappers or bags. It is covered by U.S. Patent 9,682,340 B2.</p>
+<p>The reference specification for one unit lists a 99.8 percent design collection efficiency down to 0.1 micron and a 0.5 inch water column pressure drop. Treat these as engineered targets. They are confirmed for a given site only by a metered baseline and a pilot.</p>
+
+<figure class="fig"><img src="assets/rpc-3d.jpg" alt="Cutaway rendering of the Sidel rotary particulate collector" loading="lazy"><figcaption>The RPC is one rotating collection unit in a single housing. See the <a href="rotary-particulate-collector.html">RPC page</a> for the reference specification.</figcaption></figure>
+
+<h2>Where each one struggles</h2>
+<h3>Baghouses and moisture</h3>
+<p>EPA states that fabric filters cannot be operated in moist environments. Condensation can cause caking or plugging of the fabric. The gas has to stay above the dew point of any condensable in the stream. Bags also have temperature limits, roughly 500&deg;F with the right fabric.</p>
+<p>They also need a medium pressure drop. EPA gives a typical range of <b>4 to 10 inches of water column</b>. That is fan energy you pay for every hour. And bags wear out, so replacement is a standing maintenance task.</p>
+
+<h3>ESPs and dust resistivity</h3>
+<p>Resistivity is how strongly a dust layer resists electric current. EPA's cost manual explains that above about <b>2 x 10<sup>11</sup> ohm-cm</b>, the dust layer breaks down in a way called back corona. Collection ability drops considerably. Below about 10<sup>8</sup> ohm-cm, particles are held so loosely that they get knocked back into the gas.</p>
+<p>Resistivity moves with temperature, moisture, gas composition and particle makeup. A fuel switch can change it. EPA also notes that rapping puts part of the collected dust back in the gas, typically 12 percent for coal fly ash. The last section of the ESP cannot recapture it.</p>
+<p>EPA points out the flip side too. Fabric filters can be a good fit for dust that is hard for an ESP, such as fly ash from low-sulfur coal or ash with high unburned carbon.</p>
+
+<h3>Barrier collectors and the usual trade-off</h3>
+<p>Barrier devices have always had two problems: clogging and pressure drop. The RPC is designed to answer both with continuous self-cleaning and a low-drop geometry. That is the design intent. A pilot on your gas is how you find out if it holds.</p>
+
+<h2>Questions that decide the choice</h2>
+<ol>
+<li><b>What is the dust resistivity?</b> If it is outside the ESP's comfortable range, an ESP gets bigger and harder to run.</li>
+<li><b>Is the gas moist, or close to its dew point?</b> If so, a baghouse is a risk, and you cannot cool the gas for heat recovery without thinking about it.</li>
+<li><b>What emission limit must you meet?</b> Ask for outlet concentration, not just percent removal.</li>
+<li><b>How much fan power can you spend?</b> Pressure drop is paid for in electricity.</li>
+<li><b>What can your maintenance team support?</b> Bag changes, rapper and electrode upkeep, or a single drive.</li>
+<li><b>Do you want the heat?</b> A standalone baghouse or ESP does not recover heat from the gas. See below.</li>
+</ol>
+
+<h2>The heat question most comparisons skip</h2>
+<p>Particulate control is often treated as a separate job from heat recovery. That leaves value in the stack. Cleaner, particulate-free gas is easier to cool in a <a href="flue-gas-condenser-heat-recovery.html">condensing heat recovery unit</a> without fouling the heat exchanger. The recovered heat can be held in <a href="tess-thermal-energy-storage.html">Novacab TESS</a> thermal storage and, where the temperature supports it, turned into power with an <a href="orc-waste-heat-to-power.html">ORC turbine</a>.</p>
+<p>This is why Sidel CREN treats the collector as step one of a platform, not a stand-alone box. It matters most on solid-fuel plants such as <a href="power-plant-waste-heat-recovery.html">power generation</a> and <a href="steel-mill-waste-heat-recovery.html">steel and metals</a>, and on <a href="sugar-mill-waste-heat-recovery.html">sugar mill</a> boilers.</p>
+
+<div class="note warm"><h5>Before you pick a technology</h5><p>A comparison table cannot replace data from your own stack. Sidel CREN starts with a data request and a metered baseline, then a bypassable pilot. Any performance figure is an engineered target until those prove it for your site. See <a href="approach.html">how we work</a>.</p></div>
+
+<h2>Quick answers</h2>
+<h3>How do I choose between a baghouse, an ESP and a rotary particulate collector?</h3>
+<p>Start with the dust and the gas. Check particle resistivity, gas temperature and moisture, dew point, and your emission limit. Baghouses struggle with moist gas. Electrostatic precipitators struggle with dust resistivity outside their working range. A rotary particulate collector is a barrier device with a self-cleaning disc, so it does not depend on dust charge, and Sidel CREN sizes it only after a metered baseline.</p>
+<h3>Why can&#x27;t baghouses run on wet or condensing flue gas?</h3>
+<p>EPA&#x27;s fact sheet says fabric filters cannot be operated in moist environments, because condensation can cause caking or plugging of the fabric. The gas has to stay above the dew point of any condensable in the stream, which also limits how much heat you can pull out of it upstream.</p>
+<h3>What dust resistivity is a problem for an electrostatic precipitator?</h3>
+<p>EPA&#x27;s cost manual says back corona is prevalent above about 2 x 10<sup>11</sup> ohm-cm, which sharply cuts collection ability. Below about 10<sup>8</sup> ohm-cm, particles are held so loosely that re-entrainment becomes much more severe. Resistivity also shifts with temperature, moisture and gas composition.</p>
+
+<div class="sources"><h5>Sources</h5><ul>
+<li><a href="https://www.epa.gov/sites/default/files/2020-10/documents/ff-pulse.pdf" target="_blank" rel="noopener">U.S. EPA Air Pollution Control Technology Fact Sheet: Fabric Filter, Pulse-Jet Cleaned Type (EPA-452/F-03-025)</a></li>
+<li><a href="https://www.epa.gov/sites/default/files/2020-07/documents/cs6ch3.pdf" target="_blank" rel="noopener">U.S. EPA Air Pollution Control Cost Manual, Section 6, Chapter 3: Electrostatic Precipitators (EPA/452/B-02-001)</a></li>
+<li><a href="rotary-particulate-collector.html">Sidel CREN RPC reference specification</a></li>
+</ul></div>
+
+<h2 style="font-size:1.2rem">Keep reading</h2>
+<div class="crosslinks">
+<a href="rotary-particulate-collector.html">RPC Particulate Collector</a>
+<a href="power-plant-waste-heat-recovery.html">Power Generation</a>
+<a href="steel-mill-waste-heat-recovery.html">Steel &amp; Metals</a>
+<a href="boiler-stack-heat-loss.html">Boiler stack heat loss</a>
+<a href="faq.html">FAQ</a>
+<a href="blog.html">All posts</a>
+</div>
+</article>
+
+<div class="pager">
+  <a href="blog.html"><span class="dir">&larr; Back to</span><b>All blog posts</b></a>
+  <a class="next" href="contact.html#audit-form"><span class="dir">Ready?</span><b>Start with a data request</b></a>
+</div>
+
+<footer>
+  <div class="foot">
+    <div class="col" style="max-width:330px">
+      <a class="brand" href="index.html" style="margin-bottom:14px"><span class="wm">Sidel C<b>R</b>EN<small>Carbon <b>Resilient Energy</b> Nexus, Inc dba Sidel C<b>R</b>EN</small></span></a>
+      <p>Carbon Resilient Energy NEXUS,&nbsp;Inc. DBA Sidel&nbsp;CREN.</p>
+      <p><a href="https://sidelsystems.com" target="_blank" rel="noopener" style="color:inherit">Sidel Systems USA</a> &times; SAI-DEL / Sidel Systems India &times; <a href="https://novacab.us" target="_blank" rel="noopener" style="color:inherit">Smart Phases / Novacab</a>.</p>
+      <p style="color:#7d9187">Stop the Waste. Power the Future.</p>
+    </div>
+    <div class="col">
+      <h5>The System</h5>
+      <a href="rotary-particulate-collector.html">Rotary Particulate Collector</a>
+      <a href="flue-gas-condenser-heat-recovery.html">SRU Flue Gas Condenser</a>
+      <a href="tess-thermal-energy-storage.html">TESS PCM Heat Storage</a>
+      <a href="orc-waste-heat-to-power.html">ORC + Turbine Power</a>
+      <a href="greenhouse-co2-reuse.html">Greenhouse Value</a>
+    </div>
+    <div class="col">
+      <h5>Company</h5>
+      <a href="industries.html">Industries We Serve</a>
+      <a href="case-studies.html">Case Studies</a>
+      <a href="approach.html">Our Approach</a>
+      <a href="faq.html">FAQ</a>
+      <a href="blog.html">Blog</a>
+      <a href="leadership.html">Leadership</a>
+      <a href="index.html#proof">Why Believe It</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="col">
+      <h5>Get in touch</h5>
+      <p style="color:#e6f0ea;font-weight:600;margin-bottom:2px">Michael Logan</p>
+      <p style="margin-bottom:12px">President &amp; Chairman, Sidel CREN</p>
+      <a href="mailto:michaellogan@sidelcren.com">michaellogan@sidelcren.com</a>
+      <a href="tel:+18054621250">(805) 462-1250</a>
+      <a href="tel:+12818132612">(281) 813-2612</a>
+      <p style="margin-top:12px">1500 North Grant St., Suite 10435<br>Denver, CO 80203 &middot; USA</p>
+    </div>
+  </div>
+  <div class="legal">&copy; 2026 <b>Carbon Resilient Energy NEXUS, Inc.</b> DBA Sidel CREN &middot; Sidel Systems &middot; SAI-DEL &middot; Novacab &middot; TESS &middot; RPC &middot; Website made for free by <a href="https://freesitecompany.com" class="fsc-credit">FreeSite Company</a></div>
+</footer>
+
+<button class="chatbtn" id="chatbtn" aria-label="Ask a question about Sidel CREN" title="Ask a question">💬</button>
+<div class="chatpanel" id="chatpanel" role="dialog" aria-label="Sidel CREN assistant">
+  <div class="chathead">
+    <div>
+      <div class="ttl">Ask about Sidel CREN</div>
+      <div class="sub">Answers from our own site content</div>
+    </div>
+    <button class="chatclose" id="chatclose" aria-label="Close">✕</button>
+  </div>
+  <div class="chatmsgs" id="chatmsgs">
+    <div class="cmsg bot">Hi! Ask me anything about the system, your industry, or how a pilot works.</div>
+  </div>
+  <form class="chatform" id="chatform">
+    <input type="text" id="chatinput" placeholder="Ask a question…" autocomplete="off">
+    <button type="submit" id="chatsend">→</button>
+  </form>
+</div>
+
+<script src="js/site.js"></script>
+</body>
+</html>

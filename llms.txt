@@ -38,6 +38,7 @@ Performance figures on this site are engineered targets. Sidel CREN does not quo
 ## Blog
 
 - [Blog](https://sidelcren.com/blog.html): Plain answers to waste heat recovery questions: boiler stack loss, condensing economizers, data center heat reuse, waste heat to power.
+- [Baghouse vs. ESP vs. rotary particulate collector](https://sidelcren.com/baghouse-vs-esp-vs-rotary-particulate-collector.html): How each particulate collector works, where each struggles, and the questions that decide the right choice.
 - [How much heat does a boiler lose up the stack?](https://sidelcren.com/boiler-stack-heat-loss.html): Estimating boiler stack loss from stack temperature, the hidden latent heat in water vapour, and what recovers it.
 - [Condensing vs. standard economizers](https://sidelcren.com/condensing-economizer-vs-standard-economizer.html): How a flue gas condenser recovers latent heat and water below the dew point, and what heat sink it needs.
 - [Can data center waste heat be reused?](https://sidelcren.com/data-center-waste-heat-reuse.html): District heating, liquid cooling temperatures, storage and the hard parts of reusing data center heat.
