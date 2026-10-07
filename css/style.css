@@ -21,8 +21,10 @@ img{max-width:100%;display:block}
 nav{position:fixed;top:0;left:0;right:0;z-index:150;display:flex;align-items:center;justify-content:space-between;padding:16px 28px;backdrop-filter:blur(10px);background:rgba(6,17,11,0);transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
 nav.solid{background:rgba(6,17,11,.85);border-color:var(--line)}
 .brand{display:flex;align-items:center;gap:11px;font-weight:800;letter-spacing:-.01em;font-size:1.05rem}
-.brand .dot{width:11px;height:11px;border-radius:50%;background:linear-gradient(135deg,var(--heat),var(--green));box-shadow:0 0 14px var(--green);flex:none}
-.brand small{display:block;font-weight:400;font-size:.6rem;letter-spacing:.22em;color:var(--muted);text-transform:uppercase;margin-top:-3px}
+.brand .wm{font-family:"Archivo Narrow","Arial Narrow",Arial,sans-serif;font-weight:700;font-size:1.45rem;line-height:1;letter-spacing:0;color:#fff}
+.brand .wm b,.brand small b{color:var(--green);font-weight:inherit}
+.brand small{display:block;font-family:"Archivo Narrow","Arial Narrow",Arial,sans-serif;font-weight:700;font-size:.72rem;letter-spacing:.01em;color:#e8efe9;text-transform:none;margin-top:4px;white-space:nowrap}
+@media (max-width:420px){.brand small{font-size:.6rem}}
 .navlinks{display:flex;gap:22px;font-size:.85rem;color:var(--muted);align-items:center}
 .navlinks a:hover{color:var(--ink)}
 .navlinks a.active{color:var(--green2)}
