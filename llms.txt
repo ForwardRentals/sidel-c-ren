@@ -1,0 +1,44 @@
+# Sidel CREN
+
+> Sidel CREN (Carbon Resilient Energy NEXUS, Inc., Denver, Colorado) is an industrial waste heat recovery platform. It captures heat from boiler and furnace exhaust, flue gas and data center cooling loops, stores it, and converts it into usable heat, electricity, recovered water and greenhouse CO2. The platform combines the Sidel Rotary Particulate Collector (RPC), the Sidel SRU flue gas condensing heat recovery unit, Novacab TESS phase-change thermal energy storage, and Organic Rankine Cycle (ORC) turbines.
+
+Performance figures on this site are engineered targets. Sidel CREN does not quote site-specific savings before a metered baseline and pilot. Contact: Michael Logan, President & Chairman, michaellogan@sidelcren.com, (805) 462-1250.
+
+## Home
+
+- [Home](https://sidelcren.com/): Sidel CREN is an industrial waste heat recovery platform that captures exhaust heat from boilers, furnaces, flue gas and data center cooling loops and converts it into clean power, water and food.
+
+## The System
+
+- [Rotary Particulate Collector (RPC)](https://sidelcren.com/rotary-particulate-collector.html): Patented, self-cleaning air filtration that removes ~90% of particulates from flue gas while recovering heat — with one moving part.
+- [SRU Flue Gas Condenser](https://sidelcren.com/flue-gas-condenser-heat-recovery.html): Recovers low-grade waste heat and clean condensed water from boiler and furnace exhaust. Proven in industry since 1978.
+- [Novacab TESS PCM Heat Storage](https://sidelcren.com/tess-thermal-energy-storage.html): Recovered waste heat is banked as latent heat in synthetic phase change material, ready on demand. 2007 ASHRAE Technology Award.
+- [ORC + Turbine Power](https://sidelcren.com/orc-waste-heat-to-power.html): Converts stored waste heat into clean, dispatchable electricity — adding 20–25% net output from the same plant and the same fuel.
+- [Greenhouse & Clean Stack](https://sidelcren.com/greenhouse-co2-reuse.html): Cleaned CO₂ and water vapor are routed to greenhouses for year-round food production, jobs, and community value.
+
+## Industries
+
+- [Industries We Serve](https://sidelcren.com/industries.html): Waste heat recovery applied to dairies, sugar mills, power plants, steel and metals, and data centers via the Sidel CREN platform.
+- [Dairy Plant Waste Heat Recovery](https://sidelcren.com/dairy-waste-heat-recovery.html): Milk handling, pasteurisation, refrigeration and drying — recovered and stored with the Sidel CREN SRU, RPC and Novacab TESS platform.
+- [Sugar Mill Cogeneration & Waste Heat Recovery](https://sidelcren.com/sugar-mill-waste-heat-recovery.html): Bagasse boilers, evaporation, batch pans and condenser water, recovered and stabilised with the Sidel CREN platform.
+- [Power Plant Waste Heat Recovery — Gas & Coal](https://sidelcren.com/power-plant-waste-heat-recovery.html): Boiler and generator exhaust, condenser heat and cooling towers, recovered with the Sidel CREN SRU, RPC and Novacab TESS platform.
+- [Steel Mill Waste Heat Recovery](https://sidelcren.com/steel-mill-waste-heat-recovery.html): Furnace and off-gas heat, EAF, hot rolling and quench systems, recovered with the Sidel CREN platform.
+- [Data Center Waste Heat Recovery](https://sidelcren.com/data-center-waste-heat-recovery.html): Liquid and immersion cooling loops above 122°F, recovered and stored with the Sidel CREN Novacab TESS platform.
+- [Concrete Plant Waste Heat Recovery](https://sidelcren.com/concrete-plant-waste-heat-recovery.html): Curing chambers, boilers, hot condensate and batch-water cooling at precast and prestressed plants, recovered with the Sidel CREN SRU, RPC and Novacab TESS platform.
+- [Community Microgrid — CST + TESS](https://sidelcren.com/community-microgrid-cst-tess.html): Concentrated solar thermal collectors charge Novacab TESS, which discharges through an ORC turbine for dispatchable, no-battery community microgrid power. Parabolic troughs, solar dishes, and the Fort Davis, Texas solar thermal + TESS project.
+
+## Company
+
+- [Case Studies](https://sidelcren.com/case-studies.html): Novacab TESS at IBM's Bromont facility, and the SRU flue-gas condenser at E&J Gallo Winery and Darigold dairy.
+- [Our Approach](https://sidelcren.com/approach.html): Capture, store, reuse and convert — delivered through a metered, pilot-first process that proves savings before anyone scales.
+- [Leadership & Alliance](https://sidelcren.com/leadership.html): Sidel Systems USA, SAI-DEL / Sidel Systems India, and Smart Phases / Novacab — the inventors and operators behind the platform.
+- [Contact Sidel CREN](https://sidelcren.com/contact.html): Request a consultation, a data package, or a bankable pilot for your dairy, sugar mill, power plant or steel facility.
+- [Frequently Asked Questions](https://sidelcren.com/faq.html): Boiler heat loss, particulate control alternatives, cooling tower energy, waste heat to power, and ROI — the questions industrial teams actually search for.
+
+## Blog
+
+- [Blog](https://sidelcren.com/blog.html): Plain answers to waste heat recovery questions: boiler stack loss, condensing economizers, data center heat reuse, waste heat to power.
+- [How much heat does a boiler lose up the stack?](https://sidelcren.com/boiler-stack-heat-loss.html): Estimating boiler stack loss from stack temperature, the hidden latent heat in water vapour, and what recovers it.
+- [Condensing vs. standard economizers](https://sidelcren.com/condensing-economizer-vs-standard-economizer.html): How a flue gas condenser recovers latent heat and water below the dew point, and what heat sink it needs.
+- [Can data center waste heat be reused?](https://sidelcren.com/data-center-waste-heat-reuse.html): District heating, liquid cooling temperatures, storage and the hard parts of reusing data center heat.
+- [Can waste heat be turned into electricity?](https://sidelcren.com/waste-heat-to-electricity-orc.html): Organic Rankine Cycle explained: how it works, realistic efficiency by temperature, and when it makes sense.
