@@ -277,3 +277,12 @@ addEventListener('scroll',()=>{
     img.style.transform=`translateY(${(r.top/innerHeight)*-40}px)`;
   });
 },{passive:true});
+
+/* Company-level visit log: tells the Sidel CREN team which organizations' networks
+   viewed which pages. No cookies, no personal data. Skipped on localhost. */
+(()=>{try{
+  if(!/sidelcren\.com$/.test(location.hostname)||!navigator.sendBeacon)return;
+  const ref=document.referrer&&!document.referrer.includes(location.hostname)?document.referrer:"";
+  navigator.sendBeacon("https://sidel-cren-chat.thefulltimehobby.workers.dev/visit",
+    new Blob([JSON.stringify({path:location.pathname,ref})],{type:"text/plain"}));
+}catch(e){}})();
