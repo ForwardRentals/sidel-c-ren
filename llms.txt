@@ -29,7 +29,7 @@ Performance figures on this site are engineered targets. Sidel CREN does not quo
 
 ## Company
 
-- [Case Studies](https://sidelcren.com/case-studies.html): Novacab TESS at IBM's Bromont facility, and the SRU flue-gas condenser at E&J Gallo Winery and Darigold dairy.
+- [Case Studies](https://sidelcren.com/case-studies.html): Novacab TESS at IBM Bromont, India's first RPC on a sugar mill cogeneration boiler, and SRU flue gas condenser results at Growers Transplanting, Coast Nurseries, Pelton, Smith Gardens, Mission Linen and DC Housing Authority.
 - [Our Approach](https://sidelcren.com/approach.html): Capture, store, reuse and convert — delivered through a metered, pilot-first process that proves savings before anyone scales.
 - [Leadership & Alliance](https://sidelcren.com/leadership.html): Sidel Systems USA, SAI-DEL / Sidel Systems India, and Smart Phases / Novacab — the inventors and operators behind the platform.
 - [Contact Sidel CREN](https://sidelcren.com/contact.html): Request a consultation, a data package, or a bankable pilot for your dairy, sugar mill, power plant or steel facility.
