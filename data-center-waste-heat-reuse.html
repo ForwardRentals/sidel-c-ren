@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Can Data Center Waste Heat Be Reused? What Works and What&#x27;s Hard — Sidel CREN</title>
+<link rel="icon" type="image/png" href="assets/cren-logo.png">
+<meta name="description" content="Almost every watt a data center draws ends up as heat. Where that heat can go, why liquid cooling changes the math, and the practical problems every heat-reuse project has to solve.">
+<link rel="canonical" href="https://sidelcren.com/data-center-waste-heat-reuse.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Sidel CREN">
+<meta property="og:title" content="Can Data Center Waste Heat Be Reused? What Works and What&#x27;s Hard — Sidel CREN">
+<meta property="og:description" content="Almost every watt a data center draws ends up as heat. Where that heat can go, why liquid cooling changes the math, and the practical problems every heat-reuse project has to solve.">
+<meta property="og:url" content="https://sidelcren.com/data-center-waste-heat-reuse.html">
+<meta property="og:image" content="https://sidelcren.com/assets/nova-datacenter.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Can Data Center Waste Heat Be Reused? What Works and What&#x27;s Hard — Sidel CREN">
+<meta name="twitter:description" content="Almost every watt a data center draws ends up as heat. Where that heat can go, why liquid cooling changes the math, and the practical problems every heat-reuse project has to solve.">
+<meta name="twitter:image" content="https://sidelcren.com/assets/nova-datacenter.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;700&family=Sora:wght@300;400;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BlogPosting",
+ "headline": "Can Data Center Waste Heat Be Reused? What Works and What's Hard",
+ "description": "Almost every watt a data center draws ends up as heat. Where that heat can go, why liquid cooling changes the math, and the practical problems every heat-reuse project has to solve.",
+ "image": "https://sidelcren.com/assets/nova-datacenter.jpg",
+ "datePublished": "2026-10-07",
+ "dateModified": "2026-10-07",
+ "author": {
+  "@type": "Organization",
+  "name": "Sidel CREN",
+  "url": "https://sidelcren.com/",
+  "logo": {
+   "@type": "ImageObject",
+   "url": "https://sidelcren.com/assets/sidel-cren-logo.jpg"
+  }
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Sidel CREN",
+  "url": "https://sidelcren.com/",
+  "logo": {
+   "@type": "ImageObject",
+   "url": "https://sidelcren.com/assets/sidel-cren-logo.jpg"
+  }
+ },
+ "mainEntityOfPage": {
+  "@type": "WebPage",
+  "@id": "https://sidelcren.com/data-center-waste-heat-reuse.html"
+ }
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://sidelcren.com/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Blog",
+   "item": "https://sidelcren.com/blog.html"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "Can data center waste heat be reused?",
+   "item": "https://sidelcren.com/data-center-waste-heat-reuse.html"
+  }
+ ]
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Can data center waste heat be reused?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. Nearly all the electricity a data center consumes ends up as heat, and it can be reused for district heating, building heat, greenhouses and process water. Meta's data center in Odense, Denmark, for example, supplies recovered heat to the city's district heating network using large heat pumps."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Why is data center waste heat hard to use?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Air-cooled data centers reject heat at low temperatures, often well under 100 degrees F, which is too cool for most uses without a heat pump. The heat is also produced around the clock while heating demand is seasonal, and the facility may be far from anyone who needs the heat."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Does liquid cooling make data center heat recovery easier?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. Direct-to-chip and immersion liquid cooling return water at much higher temperatures than air cooling, which makes the heat more useful for heating, storage and, at the upper end, power generation."
+   }
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<div id="prog"></div>
+
+<div class="searchmodal" id="searchmodal" role="dialog" aria-modal="true" aria-label="Search Sidel CREN">
+  <div class="searchbox">
+    <div class="si-row">
+      <span class="si-icon"></span>
+      <input type="text" id="searchinput" placeholder="Search industries, RPC, SRU, ASHRAE, data centers…" autocomplete="off">
+      <button class="searchclose" id="searchclose">Esc</button>
+    </div>
+    <div class="searchresults" id="searchresults"></div>
+    <div class="searchhint">Press <kbd>/</kbd> to search from anywhere</div>
+  </div>
+</div>
+
+<nav id="nav">
+  <a class="brand" href="index.html"><span class="wm">Sidel C<b>R</b>EN<small>Carbon <b>Resilient Energy</b> Nexus, Inc dba Sidel C<b>R</b>EN</small></span></a>
+  <button class="navtoggle" id="navtoggle" aria-label="Open menu" aria-expanded="false"><span></span></button>
+  <div class="navlinks" id="navlinks">
+    <div class="navdrop">
+      <a href="index.html#system" class="navdrop-trigger">The System</a>
+      <div class="navdrop-menu">
+        <a href="rotary-particulate-collector.html">RPC Particulate Collector</a>
+        <a href="flue-gas-condenser-heat-recovery.html">SRU Flue Gas Condenser</a>
+        <a href="tess-thermal-energy-storage.html">Novacab TESS Storage</a>
+        <a href="orc-waste-heat-to-power.html">ORC + Turbine Power</a>
+        <a href="greenhouse-co2-reuse.html">Greenhouse &amp; Clean Stack</a>
+      </div>
+    </div>
+    <div class="navdrop">
+      <a href="industries.html" class="navdrop-trigger">Industries</a>
+      <div class="navdrop-menu">
+        <a href="dairy-waste-heat-recovery.html">Dairy</a>
+        <a href="sugar-mill-waste-heat-recovery.html">Sugar Mill</a>
+        <a href="power-plant-waste-heat-recovery.html">Power Generation</a>
+        <a href="steel-mill-waste-heat-recovery.html">Steel &amp; Metals</a>
+        <a href="data-center-waste-heat-recovery.html">Data Centers</a>
+        <a href="concrete-plant-waste-heat-recovery.html">Concrete</a>
+        <a href="community-microgrid-cst-tess.html">Micro Grid</a>
+      </div>
+    </div>
+    <a href="case-studies.html">Case Studies</a>
+    <a href="approach.html">Approach</a>
+    <a href="faq.html">FAQ</a>
+    <a href="leadership.html">Leadership</a>
+    <a href="contact.html">Contact</a>
+    <button class="searchtoggle" id="searchtoggle" aria-label="Search the site" title="Search (press /)"><span></span></button>
+    <a class="navcta" href="contact.html#audit-form">Book a Consultation</a>
+  </div>
+</nav>
+
+<header class="hero short" id="top">
+  <div class="hero-bg"><img src="assets/nova-datacenter.jpg" alt="Data center server hall"></div>
+  <div class="hero-inner">
+    <span class="eyebrow">DATA CENTERS</span>
+    <h1>Can data center waste heat<br><span class="grad">actually be reused?</span></h1>
+    <p class="lead">Yes, and some cities already heat thousands of homes with it. But the heat is low-grade and it never stops, and that makes it harder to use than it sounds. Here's what works.</p>
+  </div>
+</header>
+
+<article class="post">
+<div class="meta"><a href="blog.html" style="text-decoration:none"><b>Sidel CREN Blog</b></a> &middot; October 7, 2026 &middot; Data centers</div>
+
+<div class="answer"><h5>The short answer</h5>
+<p>Yes. Almost every kilowatt-hour a data center draws ends up as heat, and that heat can warm homes, buildings, greenhouses and process water. The obstacles are that it is <b>low-temperature</b>, it is produced <b>24/7 while heat demand is seasonal</b>, and the facility is often <b>far from anyone who needs it</b>. Liquid cooling and thermal storage are what change that.</p></div>
+
+<h2>Where the heat comes from</h2>
+<p>Servers turn electricity into computation, and physics turns nearly all of it into heat. A data center is, in energy terms, a very large electric heater with a cooling system attached. The cooling system's whole job is to move that heat outside, usually to cooling towers, dry coolers or chillers, where it is thrown away.</p>
+<p>As AI workloads push rack densities up, the amount of heat per building is climbing fast. That makes the waste more visible, and more valuable.</p>
+
+<h2>Why temperature is everything</h2>
+<p>Heat is only as useful as it is hot. Traditional air-cooled halls return air and water at temperatures that are fine for keeping servers alive, but too cool to heat much of anything directly. To reuse it, operators usually need a heat pump to lift the temperature, and that costs electricity.</p>
+<p><b>Liquid cooling changes this.</b> Direct-to-chip and immersion systems carry heat away in liquid, and they can run much warmer. ASHRAE's liquid-cooling classes now go up to W45, meaning facility supply water up to 45&deg;C (113&deg;F), and W+ for higher still. Return water runs warmer than supply. At those temperatures, the heat starts to be directly useful for building heat and hot water, and it can be stored.</p>
+
+<h2>What's working today</h2>
+<h3>District heating</h3>
+<p>The best-known example is Meta's data center in Odense, Denmark. Water from the city's district heating network runs through the facility's cooling units, picks up server heat, and then goes through large ammonia heat pumps that raise it to around 70&ndash;75&deg;C for the city network. Engineering firm Ramboll designed the plant. Published figures vary by source and year, but recent reports put it at roughly <b>165,000 MWh of heat a year, enough for about 9,000 homes</b>.</p>
+<p>That works in Denmark because the district heating pipes were already there. Most of North America doesn't have that network, which is why on-site and nearby uses matter more here.</p>
+
+<h3>Other uses</h3>
+<ul>
+<li><b>Building and campus heat.</b> Offices, universities, hospitals and other heat users next to a data center.</li>
+<li><b>Greenhouses.</b> Year-round growing needs steady low-grade heat. See the <a href="greenhouse-co2-reuse.html">greenhouse page</a>.</li>
+<li><b>Process water.</b> Food and beverage plants pre-heat water in huge volumes.</li>
+<li><b>Power.</b> At the warmer end of liquid cooling, an <a href="waste-heat-to-electricity-orc.html">ORC turbine</a> can turn some of the heat back into electricity. Efficiency at these temperatures is modest, so it works best paired with storage.</li>
+</ul>
+
+<h2>The hard parts</h2>
+<ol>
+<li><b>Timing.</b> A data center makes the same heat at 3 a.m. in July as at 6 p.m. in January. Heating demand doesn't work that way. Without storage, most of the summer heat still gets thrown away.</li>
+<li><b>Distance.</b> Heat doesn't travel well. A heat user a few miles away usually means expensive insulated pipe.</li>
+<li><b>Contracts.</b> The data center's priority is uptime, not heat sales. A reuse system has to be bypassable so it can never put cooling at risk.</li>
+<li><b>Temperature lift.</b> Air-cooled heat needs heat pumps, and heat pumps need power.</li>
+</ol>
+
+<h2>Where thermal storage fits</h2>
+<p>Storage solves the timing problem. <a href="tess-thermal-energy-storage.html">Novacab TESS</a> stores heat as latent heat in a phase-change material, from roughly 50&deg;C (122&deg;F) upward. Heat captured from the cooling loop can be banked when nobody needs it and released when someone does, for heating or for power generation. Sidel CREN's <a href="data-center-waste-heat-recovery.html">data center approach</a> intercepts the heat before it reaches the cooling tower, so the same system can also cut cooling-tower load and water use.</p>
+<p>This is also the idea behind the community power plant concept: put the heat source, the storage and the heat users close together on purpose. See the <a href="community-microgrid-cst-tess.html">micro grid page</a>.</p>
+
+<div class="note warm"><h5>Questions to ask before a heat-reuse project</h5><p>What temperature does your cooling loop actually return at? Who within a mile could use heat, and when? Can the reuse loop be bypassed without touching cooling? Those three answers decide whether a project pencils out, and they come before any savings estimate. <a href="contact.html#audit-form">Start with a data request.</a></p></div>
+
+<h2>Quick answers</h2>
+<h3>Can data center waste heat be reused?</h3>
+<p>Yes. Nearly all the electricity a data center consumes ends up as heat, and it can be reused for district heating, building heat, greenhouses and process water. Meta&#x27;s data center in Odense, Denmark, for example, supplies recovered heat to the city&#x27;s district heating network using large heat pumps.</p>
+<h3>Why is data center waste heat hard to use?</h3>
+<p>Air-cooled data centers reject heat at low temperatures, often well under 100 degrees F, which is too cool for most uses without a heat pump. The heat is also produced around the clock while heating demand is seasonal, and the facility may be far from anyone who needs the heat.</p>
+<h3>Does liquid cooling make data center heat recovery easier?</h3>
+<p>Yes. Direct-to-chip and immersion liquid cooling return water at much higher temperatures than air cooling, which makes the heat more useful for heating, storage and, at the upper end, power generation.</p>
+
+<div class="sources"><h5>Sources</h5><ul>
+<li><a href="https://www.ramboll.com/en-us/projects/energy/meta-surplus-heat-to-district-heating" target="_blank" rel="noopener">Ramboll: Meta surplus heat to district heating (Odense)</a></li>
+<li><a href="https://www.districtenergy.org/blogs/district-energy/2026/08/24/data-center-heats-9000-homes-how-meta-established" target="_blank" rel="noopener">International District Energy Association: Data center heats 9,000 homes (Aug 2026)</a></li>
+<li><a href="https://sustainability.atmeta.com/asset/fb-denmark-data-center-to-warm-local-community" target="_blank" rel="noopener">Meta Sustainability: Denmark data center to warm local community</a></li>
+</ul></div>
+
+<h2 style="font-size:1.2rem">Keep reading</h2>
+<div class="crosslinks">
+<a href="data-center-waste-heat-recovery.html">Data Centers</a>
+<a href="tess-thermal-energy-storage.html">Novacab TESS Storage</a>
+<a href="waste-heat-to-electricity-orc.html">Waste heat to electricity</a>
+<a href="community-microgrid-cst-tess.html">Micro Grid</a>
+<a href="blog.html">All posts</a>
+</div>
+</article>
+
+<div class="pager">
+  <a href="blog.html"><span class="dir">&larr; Back to</span><b>All blog posts</b></a>
+  <a class="next" href="contact.html#audit-form"><span class="dir">Ready?</span><b>Start with a data request</b></a>
+</div>
+
+<footer>
+  <div class="foot">
+    <div class="col" style="max-width:330px">
+      <a class="brand" href="index.html" style="margin-bottom:14px"><span class="wm">Sidel C<b>R</b>EN<small>Carbon <b>Resilient Energy</b> Nexus, Inc dba Sidel C<b>R</b>EN</small></span></a>
+      <p>Carbon Resilient Energy NEXUS,&nbsp;Inc. DBA Sidel&nbsp;CREN.</p>
+      <p><a href="https://sidelsystems.com" target="_blank" rel="noopener" style="color:inherit">Sidel Systems USA</a> &times; SAI-DEL / Sidel Systems India &times; <a href="https://novacab.us" target="_blank" rel="noopener" style="color:inherit">Smart Phases / Novacab</a>.</p>
+      <p style="color:#7d9187">Stop the Waste. Power the Future.</p>
+    </div>
+    <div class="col">
+      <h5>The System</h5>
+      <a href="rotary-particulate-collector.html">Rotary Particulate Collector</a>
+      <a href="flue-gas-condenser-heat-recovery.html">SRU Flue Gas Condenser</a>
+      <a href="tess-thermal-energy-storage.html">TESS PCM Heat Storage</a>
+      <a href="orc-waste-heat-to-power.html">ORC + Turbine Power</a>
+      <a href="greenhouse-co2-reuse.html">Greenhouse Value</a>
+    </div>
+    <div class="col">
+      <h5>Company</h5>
+      <a href="industries.html">Industries We Serve</a>
+      <a href="case-studies.html">Case Studies</a>
+      <a href="approach.html">Our Approach</a>
+      <a href="faq.html">FAQ</a>
+      <a href="blog.html">Blog</a>
+      <a href="leadership.html">Leadership</a>
+      <a href="index.html#proof">Why Believe It</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="col">
+      <h5>Get in touch</h5>
+      <p style="color:#e6f0ea;font-weight:600;margin-bottom:2px">Michael Logan</p>
+      <p style="margin-bottom:12px">President &amp; Chairman, Sidel CREN</p>
+      <a href="mailto:michaellogan@sidelcren.com">michaellogan@sidelcren.com</a>
+      <a href="tel:+18054621250">(805) 462-1250</a>
+      <a href="tel:+12818132612">(281) 813-2612</a>
+      <p style="margin-top:12px">1500 North Grant St., Suite 10435<br>Denver, CO 80203 &middot; USA</p>
+    </div>
+  </div>
+  <div class="legal">&copy; 2026 <b>Carbon Resilient Energy NEXUS, Inc.</b> DBA Sidel CREN &middot; Sidel Systems &middot; SAI-DEL &middot; Novacab &middot; TESS &middot; RPC &middot; Website made for free by <a href="https://freesitecompany.com" class="fsc-credit">FreeSite Company</a></div>
+</footer>
+
+<button class="chatbtn" id="chatbtn" aria-label="Ask a question about Sidel CREN" title="Ask a question">💬</button>
+<div class="chatpanel" id="chatpanel" role="dialog" aria-label="Sidel CREN assistant">
+  <div class="chathead">
+    <div>
+      <div class="ttl">Ask about Sidel CREN</div>
+      <div class="sub">Answers from our own site content</div>
+    </div>
+    <button class="chatclose" id="chatclose" aria-label="Close">✕</button>
+  </div>
+  <div class="chatmsgs" id="chatmsgs">
+    <div class="cmsg bot">Hi! Ask me anything about the system, your industry, or how a pilot works.</div>
+  </div>
+  <form class="chatform" id="chatform">
+    <input type="text" id="chatinput" placeholder="Ask a question…" autocomplete="off">
+    <button type="submit" id="chatsend">→</button>
+  </form>
+</div>
+
+<script src="js/site.js"></script>
+</body>
+</html>

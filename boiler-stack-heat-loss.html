@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How Much Heat Does an Industrial Boiler Lose Up the Stack? — Sidel CREN</title>
+<link rel="icon" type="image/png" href="assets/cren-logo.png">
+<meta name="description" content="Stack loss is usually a boiler&#x27;s single biggest energy loss. How to estimate it from your stack temperature, why the water vapour matters, and what actually recovers it.">
+<link rel="canonical" href="https://sidelcren.com/boiler-stack-heat-loss.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Sidel CREN">
+<meta property="og:title" content="How Much Heat Does an Industrial Boiler Lose Up the Stack? — Sidel CREN">
+<meta property="og:description" content="Stack loss is usually a boiler&#x27;s single biggest energy loss. How to estimate it from your stack temperature, why the water vapour matters, and what actually recovers it.">
+<meta property="og:url" content="https://sidelcren.com/boiler-stack-heat-loss.html">
+<meta property="og:image" content="https://sidelcren.com/assets/power-hero-redwoods.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How Much Heat Does an Industrial Boiler Lose Up the Stack? — Sidel CREN">
+<meta name="twitter:description" content="Stack loss is usually a boiler&#x27;s single biggest energy loss. How to estimate it from your stack temperature, why the water vapour matters, and what actually recovers it.">
+<meta name="twitter:image" content="https://sidelcren.com/assets/power-hero-redwoods.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;700&family=Sora:wght@300;400;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BlogPosting",
+ "headline": "How Much Heat Does an Industrial Boiler Lose Up the Stack?",
+ "description": "Stack loss is usually a boiler's single biggest energy loss. How to estimate it from your stack temperature, why the water vapour matters, and what actually recovers it.",
+ "image": "https://sidelcren.com/assets/power-hero-redwoods.jpg",
+ "datePublished": "2026-10-07",
+ "dateModified": "2026-10-07",
+ "author": {
+  "@type": "Organization",
+  "name": "Sidel CREN",
+  "url": "https://sidelcren.com/",
+  "logo": {
+   "@type": "ImageObject",
+   "url": "https://sidelcren.com/assets/sidel-cren-logo.jpg"
+  }
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Sidel CREN",
+  "url": "https://sidelcren.com/",
+  "logo": {
+   "@type": "ImageObject",
+   "url": "https://sidelcren.com/assets/sidel-cren-logo.jpg"
+  }
+ },
+ "mainEntityOfPage": {
+  "@type": "WebPage",
+  "@id": "https://sidelcren.com/boiler-stack-heat-loss.html"
+ }
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://sidelcren.com/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Blog",
+   "item": "https://sidelcren.com/blog.html"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "How much heat does a boiler lose up the stack?",
+   "item": "https://sidelcren.com/boiler-stack-heat-loss.html"
+  }
+ ]
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "How much heat does an industrial boiler lose up the stack?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "On a typical gas-fired industrial boiler, the flue gas commonly carries away somewhere between 15 and 30 percent of the fuel's energy. Part of that is sensible heat in the hot gas and part is latent heat locked in the water vapour formed during combustion."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How much does lowering stack temperature improve boiler efficiency?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "The U.S. Department of Energy's rule of thumb is that boiler efficiency rises by roughly 1 percent for every 40 degrees F drop in flue gas temperature. Cooling the gas below its water dew point, about 135 degrees F for natural gas, also recovers latent heat that a conventional economizer cannot reach."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Why don't conventional economizers cool flue gas further?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Conventional economizers usually stop around 250 degrees F because cooling the gas further causes water to condense, and that condensate is corrosive to ordinary carbon-steel stacks and ductwork. Recovering heat below the dew point needs a condensing heat exchanger built from corrosion-resistant materials."
+   }
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<div id="prog"></div>
+
+<div class="searchmodal" id="searchmodal" role="dialog" aria-modal="true" aria-label="Search Sidel CREN">
+  <div class="searchbox">
+    <div class="si-row">
+      <span class="si-icon"></span>
+      <input type="text" id="searchinput" placeholder="Search industries, RPC, SRU, ASHRAE, data centers…" autocomplete="off">
+      <button class="searchclose" id="searchclose">Esc</button>
+    </div>
+    <div class="searchresults" id="searchresults"></div>
+    <div class="searchhint">Press <kbd>/</kbd> to search from anywhere</div>
+  </div>
+</div>
+
+<nav id="nav">
+  <a class="brand" href="index.html"><span class="wm">Sidel C<b>R</b>EN<small>Carbon <b>Resilient Energy</b> Nexus, Inc dba Sidel C<b>R</b>EN</small></span></a>
+  <button class="navtoggle" id="navtoggle" aria-label="Open menu" aria-expanded="false"><span></span></button>
+  <div class="navlinks" id="navlinks">
+    <div class="navdrop">
+      <a href="index.html#system" class="navdrop-trigger">The System</a>
+      <div class="navdrop-menu">
+        <a href="rotary-particulate-collector.html">RPC Particulate Collector</a>
+        <a href="flue-gas-condenser-heat-recovery.html">SRU Flue Gas Condenser</a>
+        <a href="tess-thermal-energy-storage.html">Novacab TESS Storage</a>
+        <a href="orc-waste-heat-to-power.html">ORC + Turbine Power</a>
+        <a href="greenhouse-co2-reuse.html">Greenhouse &amp; Clean Stack</a>
+      </div>
+    </div>
+    <div class="navdrop">
+      <a href="industries.html" class="navdrop-trigger">Industries</a>
+      <div class="navdrop-menu">
+        <a href="dairy-waste-heat-recovery.html">Dairy</a>
+        <a href="sugar-mill-waste-heat-recovery.html">Sugar Mill</a>
+        <a href="power-plant-waste-heat-recovery.html">Power Generation</a>
+        <a href="steel-mill-waste-heat-recovery.html">Steel &amp; Metals</a>
+        <a href="data-center-waste-heat-recovery.html">Data Centers</a>
+        <a href="concrete-plant-waste-heat-recovery.html">Concrete</a>
+        <a href="community-microgrid-cst-tess.html">Micro Grid</a>
+      </div>
+    </div>
+    <a href="case-studies.html">Case Studies</a>
+    <a href="approach.html">Approach</a>
+    <a href="faq.html">FAQ</a>
+    <a href="leadership.html">Leadership</a>
+    <a href="contact.html">Contact</a>
+    <button class="searchtoggle" id="searchtoggle" aria-label="Search the site" title="Search (press /)"><span></span></button>
+    <a class="navcta" href="contact.html#audit-form">Book a Consultation</a>
+  </div>
+</nav>
+
+<header class="hero short" id="top">
+  <div class="hero-bg"><img src="assets/power-hero-redwoods.jpg" alt="Forest canopy, Sidel CREN"></div>
+  <div class="hero-inner">
+    <span class="eyebrow">BOILERS &amp; FLUE GAS</span>
+    <h1>How much heat does your boiler<br><span class="grad">send up the stack?</span></h1>
+    <p class="lead">Stack loss is usually the biggest single energy loss on an industrial boiler, and most plants have never put a number on it. Here's how to estimate yours, and what can be done about it.</p>
+  </div>
+</header>
+
+<article class="post">
+<div class="meta"><a href="blog.html" style="text-decoration:none"><b>Sidel CREN Blog</b></a> &middot; October 7, 2026 &middot; Boilers</div>
+
+<div class="answer"><h5>The short answer</h5>
+<p>On a typical gas-fired industrial boiler, flue gas commonly carries away <b>15 to 30 percent of the fuel you buy</b>. Older, poorly tuned or high-excess-air units sit at the top of that range. The loss comes in two forms: heat in the hot gas itself, and heat hidden in the water vapour that combustion produces.</p></div>
+
+<p>Every boiler has losses: radiation from the shell, blowdown, condensate that never comes back. But the stack is almost always the big one, and it is the one plants tend to treat as fixed. It isn't. The temperature of the gas leaving your stack is a direct readout of fuel you paid for and threw away.</p>
+
+<h2>Two kinds of heat leave through the stack</h2>
+<h3>1. Sensible heat: the gas is hot</h3>
+<p>Flue gas typically leaves a boiler 100&ndash;150&deg;F hotter than the steam it produced, according to the U.S. Department of Energy. On many plants that means a stack running at 300&ndash;450&deg;F or more. All of that temperature above ambient is energy that left the building.</p>
+
+<h3>2. Latent heat: the water vapour</h3>
+<p>This is the part most people miss. Natural gas is mostly methane, and burning methane makes water. The DOE puts it at about <b>2.25 pounds of water vapour for every pound of methane burned</b>. Put another way, every 1,000 cubic feet of natural gas you burn produces roughly 10 to 12 gallons of water, and it leaves the stack as steam.</p>
+<p>Turning that water into vapour took energy, and that energy only comes back if the vapour condenses. In one DOE worked example, a 116 MMBtu/hr natural gas boiler was sending more than 10.6 MMBtu/hr up the stack as latent heat alone. That is <b>about 9 percent of the firing rate</b>, hidden in steam you can't see on a thermometer.</p>
+
+<figure class="fig"><img src="assets/power-plant-flow-diagram.jpg" alt="Diagram of where heat recovery fits into a boiler and stack system" loading="lazy"><figcaption>Where recovered stack heat goes in a Sidel CREN system. See the <a href="flue-gas-condenser-heat-recovery.html">SRU flue gas condenser</a>.</figcaption></figure>
+
+<h2>A quick way to estimate your own stack loss</h2>
+<p>You don't need an energy audit to get a first number. You need three readings and a rule of thumb.</p>
+<ol>
+<li><b>Stack temperature.</b> Read it at the boiler outlet under normal load.</li>
+<li><b>Steam or water temperature.</b> If the stack runs more than about 150&deg;F above it, heat transfer surfaces may be fouled or the boiler may be oversized for the load.</li>
+<li><b>Flue gas oxygen.</b> High excess air means you are heating air you never needed, then throwing it away.</li>
+</ol>
+<p>The DOE's rule of thumb: <b>boiler efficiency rises roughly 1 percent for every 40&deg;F drop in flue gas temperature</b>, and roughly 1 percent for every 15 percent reduction in excess air. These are estimates, not guarantees, but they are good enough to tell you whether a deeper look is worth it.</p>
+
+<h3>What 1 percent is worth</h3>
+<p>Here is some illustrative arithmetic. These numbers are made up to show the method. They are not a quote and not from any real site.</p>
+<div class="tblwrap"><table class="tbl">
+<tr><th>Input</th><th>Example value</th></tr>
+<tr><td>Average firing rate</td><td>20 MMBtu/hr</td></tr>
+<tr><td>Operating hours</td><td>8,000 per year</td></tr>
+<tr><td>Gas price</td><td>$5.00 per MMBtu</td></tr>
+<tr><td>Annual fuel spend</td><td>$800,000</td></tr>
+<tr><td>Value of each 1% efficiency gain</td><td>about $8,000 per year</td></tr>
+</table></div>
+<p>Drop that example stack from 350&deg;F to 250&deg;F and the rule of thumb gives you roughly 2.5 points, or about $20,000 a year. Go below the water dew point and you start recovering the latent heat too, which is where the bigger numbers live. Run the same math with your own gas price and hours.</p>
+
+<h2>Why most boilers stop at 250&deg;F</h2>
+<p>If the heat is sitting right there, why don't plants just take it? Because of water. A conventional economizer heats boiler feedwater with flue gas, and it is designed to keep the gas above about 250&deg;F. Cool it much further and the water vapour starts to condense. For natural gas that happens at about <b>135&deg;F</b>. That condensate is mildly acidic, and it eats ordinary carbon-steel stacks and ductwork.</p>
+<p>So the standard design leaves the gas hot on purpose. That protects the stack, and it also guarantees the latent heat is never recovered.</p>
+
+<h2>What actually recovers it</h2>
+<p>Getting below the dew point takes a <b>condensing heat exchanger</b>: a unit built from corrosion-resistant materials, with a drain for the condensate, and a cold enough stream of water to pull the heat out. We explain the difference in detail in <a href="condensing-economizer-vs-standard-economizer.html">condensing vs. standard economizers</a>.</p>
+<p>The <a href="flue-gas-condenser-heat-recovery.html">Sidel SRU</a> is a flue gas condensing heat recovery unit of exactly this type, in industrial use since 1978. It recovers both the sensible and the latent heat, and the condensed water can be collected rather than lost. When the plant can't use all of that heat at the moment it is recovered, <a href="tess-thermal-energy-storage.html">Novacab TESS</a> thermal storage holds it until it is needed.</p>
+
+<h2>Other losses worth checking while you're there</h2>
+<ul>
+<li><b>Blowdown.</b> Hot water dumped to control dissolved solids. Heat exchangers on blowdown lines are often a quick win.</li>
+<li><b>Condensate return.</b> Every gallon of hot condensate not returned is a gallon of cold makeup water you have to heat from scratch.</li>
+<li><b>Shell and piping radiation.</b> Uninsulated valves and flanges add up.</li>
+</ul>
+
+<div class="note warm"><h5>Before you put a number in a budget</h5><p>Rules of thumb tell you where to look. They don't tell you what you'll save. Sidel CREN starts every project with a data request and a metered baseline, so any savings figure comes from your plant's real numbers. See <a href="approach.html">how we work</a>.</p></div>
+
+<h2>Quick answers</h2>
+<h3>How much heat does an industrial boiler lose up the stack?</h3>
+<p>On a typical gas-fired industrial boiler, the flue gas commonly carries away somewhere between 15 and 30 percent of the fuel&#x27;s energy. Part of that is sensible heat in the hot gas and part is latent heat locked in the water vapour formed during combustion.</p>
+<h3>How much does lowering stack temperature improve boiler efficiency?</h3>
+<p>The U.S. Department of Energy&#x27;s rule of thumb is that boiler efficiency rises by roughly 1 percent for every 40 degrees F drop in flue gas temperature. Cooling the gas below its water dew point, about 135 degrees F for natural gas, also recovers latent heat that a conventional economizer cannot reach.</p>
+<h3>Why don&#x27;t conventional economizers cool flue gas further?</h3>
+<p>Conventional economizers usually stop around 250 degrees F because cooling the gas further causes water to condense, and that condensate is corrosive to ordinary carbon-steel stacks and ductwork. Recovering heat below the dew point needs a condensing heat exchanger built from corrosion-resistant materials.</p>
+
+<div class="sources"><h5>Sources</h5><ul>
+<li><a href="https://www.energy.gov/sites/prod/files/2014/05/f16/steam3_recovery.pdf" target="_blank" rel="noopener">U.S. DOE Steam Tip Sheet #3: Use Feedwater Economizers for Waste Heat Recovery</a></li>
+<li><a href="https://www1.eere.energy.gov/manufacturing/tech_assistance/pdfs/steam26a_condensing.pdf" target="_blank" rel="noopener">U.S. DOE Steam Tip Sheet #26A: Consider Installing a Condensing Economizer</a></li>
+<li><a href="https://nrel.gov/docs/fy12osti/52752.pdf" target="_blank" rel="noopener">NREL / DOE: Considering Installing a Condensing Economizer</a></li>
+</ul></div>
+
+<h2 style="font-size:1.2rem">Keep reading</h2>
+<div class="crosslinks">
+<a href="condensing-economizer-vs-standard-economizer.html">Condensing vs. standard economizers</a>
+<a href="flue-gas-condenser-heat-recovery.html">SRU Flue Gas Condenser</a>
+<a href="dairy-waste-heat-recovery.html">Dairy</a>
+<a href="faq.html">FAQ</a>
+<a href="blog.html">All posts</a>
+</div>
+</article>
+
+<div class="pager">
+  <a href="blog.html"><span class="dir">&larr; Back to</span><b>All blog posts</b></a>
+  <a class="next" href="contact.html#audit-form"><span class="dir">Ready?</span><b>Start with a data request</b></a>
+</div>
+
+<footer>
+  <div class="foot">
+    <div class="col" style="max-width:330px">
+      <a class="brand" href="index.html" style="margin-bottom:14px"><span class="wm">Sidel C<b>R</b>EN<small>Carbon <b>Resilient Energy</b> Nexus, Inc dba Sidel C<b>R</b>EN</small></span></a>
+      <p>Carbon Resilient Energy NEXUS,&nbsp;Inc. DBA Sidel&nbsp;CREN.</p>
+      <p><a href="https://sidelsystems.com" target="_blank" rel="noopener" style="color:inherit">Sidel Systems USA</a> &times; SAI-DEL / Sidel Systems India &times; <a href="https://novacab.us" target="_blank" rel="noopener" style="color:inherit">Smart Phases / Novacab</a>.</p>
+      <p style="color:#7d9187">Stop the Waste. Power the Future.</p>
+    </div>
+    <div class="col">
+      <h5>The System</h5>
+      <a href="rotary-particulate-collector.html">Rotary Particulate Collector</a>
+      <a href="flue-gas-condenser-heat-recovery.html">SRU Flue Gas Condenser</a>
+      <a href="tess-thermal-energy-storage.html">TESS PCM Heat Storage</a>
+      <a href="orc-waste-heat-to-power.html">ORC + Turbine Power</a>
+      <a href="greenhouse-co2-reuse.html">Greenhouse Value</a>
+    </div>
+    <div class="col">
+      <h5>Company</h5>
+      <a href="industries.html">Industries We Serve</a>
+      <a href="case-studies.html">Case Studies</a>
+      <a href="approach.html">Our Approach</a>
+      <a href="faq.html">FAQ</a>
+      <a href="blog.html">Blog</a>
+      <a href="leadership.html">Leadership</a>
+      <a href="index.html#proof">Why Believe It</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="col">
+      <h5>Get in touch</h5>
+      <p style="color:#e6f0ea;font-weight:600;margin-bottom:2px">Michael Logan</p>
+      <p style="margin-bottom:12px">President &amp; Chairman, Sidel CREN</p>
+      <a href="mailto:michaellogan@sidelcren.com">michaellogan@sidelcren.com</a>
+      <a href="tel:+18054621250">(805) 462-1250</a>
+      <a href="tel:+12818132612">(281) 813-2612</a>
+      <p style="margin-top:12px">1500 North Grant St., Suite 10435<br>Denver, CO 80203 &middot; USA</p>
+    </div>
+  </div>
+  <div class="legal">&copy; 2026 <b>Carbon Resilient Energy NEXUS, Inc.</b> DBA Sidel CREN &middot; Sidel Systems &middot; SAI-DEL &middot; Novacab &middot; TESS &middot; RPC &middot; Website made for free by <a href="https://freesitecompany.com" class="fsc-credit">FreeSite Company</a></div>
+</footer>
+
+<button class="chatbtn" id="chatbtn" aria-label="Ask a question about Sidel CREN" title="Ask a question">💬</button>
+<div class="chatpanel" id="chatpanel" role="dialog" aria-label="Sidel CREN assistant">
+  <div class="chathead">
+    <div>
+      <div class="ttl">Ask about Sidel CREN</div>
+      <div class="sub">Answers from our own site content</div>
+    </div>
+    <button class="chatclose" id="chatclose" aria-label="Close">✕</button>
+  </div>
+  <div class="chatmsgs" id="chatmsgs">
+    <div class="cmsg bot">Hi! Ask me anything about the system, your industry, or how a pilot works.</div>
+  </div>
+  <form class="chatform" id="chatform">
+    <input type="text" id="chatinput" placeholder="Ask a question…" autocomplete="off">
+    <button type="submit" id="chatsend">→</button>
+  </form>
+</div>
+
+<script src="js/site.js"></script>
+</body>
+</html>
