@@ -5,21 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Can Waste Heat Be Turned Into Electricity? — Sidel CREN</title>
 <link rel="icon" type="image/png" href="assets/cren-logo.png">
-<meta name="description" content="Yes, with an Organic Rankine Cycle. How ORC turbines work, what efficiency to realistically expect at different temperatures, and when making power from waste heat makes sense.">
+<meta name="description" content="Yes, with an Organic Rankine Cycle. How ORC turbines work, realistic efficiency at different temperatures, and when waste heat to power pays.">
 <link rel="canonical" href="https://sidelcren.com/waste-heat-to-electricity-orc.html">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Sidel CREN">
 <meta property="og:title" content="Can Waste Heat Be Turned Into Electricity? — Sidel CREN">
-<meta property="og:description" content="Yes, with an Organic Rankine Cycle. How ORC turbines work, what efficiency to realistically expect at different temperatures, and when making power from waste heat makes sense.">
+<meta property="og:description" content="Yes, with an Organic Rankine Cycle. How ORC turbines work, realistic efficiency at different temperatures, and when waste heat to power pays.">
 <meta property="og:url" content="https://sidelcren.com/waste-heat-to-electricity-orc.html">
 <meta property="og:image" content="https://sidelcren.com/assets/tess-hero-mossforest.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Can Waste Heat Be Turned Into Electricity? — Sidel CREN">
-<meta name="twitter:description" content="Yes, with an Organic Rankine Cycle. How ORC turbines work, what efficiency to realistically expect at different temperatures, and when making power from waste heat makes sense.">
+<meta name="twitter:description" content="Yes, with an Organic Rankine Cycle. How ORC turbines work, realistic efficiency at different temperatures, and when waste heat to power pays.">
 <meta name="twitter:image" content="https://sidelcren.com/assets/tess-hero-mossforest.jpg">
+<link rel="preload" as="image" href="assets/tess-hero-mossforest.webp" imagesrcset="assets/tess-hero-mossforest-800.webp 800w, assets/tess-hero-mossforest.webp 1920w" imagesizes="100vw" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;700&family=Sora:wght@300;400;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@700&family=Sora:wght@300;400;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@700&family=Sora:wght@300;400;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap"></noscript>
 <link rel="stylesheet" href="css/style.css">
 <script type="application/ld+json">
 {
@@ -165,7 +167,7 @@
 </nav>
 
 <header class="hero short" id="top">
-  <div class="hero-bg"><img src="assets/tess-hero-mossforest.jpg" alt="Moss forest"></div>
+  <div class="hero-bg"><img fetchpriority="high" src="assets/tess-hero-mossforest.webp" srcset="assets/tess-hero-mossforest-800.webp 800w, assets/tess-hero-mossforest.webp 1920w" sizes="100vw" alt="Moss forest"></div>
   <div class="hero-inner">
     <span class="eyebrow">WASTE HEAT TO POWER</span>
     <h1>Can waste heat be turned<br><span class="grad">into electricity?</span></h1>
@@ -176,7 +178,7 @@
 <article class="post">
 <div class="meta"><a href="blog.html" style="text-decoration:none"><b>Sidel CREN Blog</b></a> &middot; October 7, 2026 &middot; Power</div>
 
-<div class="answer"><h5>The short answer</h5>
+<div class="answer"><div class="hl">The short answer</div>
 <p>Yes. For heat that is too cool to raise steam, the standard tool is an <b>Organic Rankine Cycle (ORC)</b> turbine. It works like a steam turbine, but uses a fluid that boils at a much lower temperature than water. Expect efficiency to climb with temperature: <b>a few percent</b> from warm water, <b>roughly 10&ndash;16 percent</b> from heat in the 150&ndash;250&deg;C range.</p></div>
 
 <h2>How an ORC works</h2>
@@ -203,7 +205,7 @@
 <p>Here is the part that often gets skipped. If there is a direct use for the heat, such as process water, space heating, drying or a greenhouse, <b>using it as heat is usually worth more</b> than turning it into electricity, because nearly all of it gets used instead of 10 percent.</p>
 <p>So the right order is: recover the heat, use what you can directly, and convert the remainder, especially the hottest remainder, into power. That is the logic of the Sidel CREN platform: the <a href="flue-gas-condenser-heat-recovery.html">SRU flue gas condenser</a> and <a href="rotary-particulate-collector.html">RPC</a> recover heat, <a href="tess-thermal-energy-storage.html">TESS</a> stores it, and the <a href="orc-waste-heat-to-power.html">ORC stage</a> turns what's left into behind-the-meter electricity.</p>
 
-<figure class="fig"><img src="assets/tess-cutaway.jpg" alt="Cutaway of a Novacab TESS thermal energy storage unit" loading="lazy"><figcaption>Novacab TESS stores recovered heat in a phase-change material so an ORC can run steadily. <a href="tess-thermal-energy-storage.html">How TESS works.</a></figcaption></figure>
+<figure class="fig"><img src="assets/tess-cutaway.webp" srcset="assets/tess-cutaway-800.webp 800w, assets/tess-cutaway.webp 1448w" sizes="(max-width: 1120px) 100vw, 1120px" alt="Cutaway of a Novacab TESS thermal energy storage unit" loading="lazy"><figcaption>Novacab TESS stores recovered heat in a phase-change material so an ORC can run steadily. <a href="tess-thermal-energy-storage.html">How TESS works.</a></figcaption></figure>
 
 <h2>Why storage makes ORC better</h2>
 <p>ORC turbines like a steady, hot supply. Real waste heat is often neither: it rises and falls with production, batches and shifts. Thermal storage evens that out. <a href="tess-thermal-energy-storage.html">Novacab TESS</a> stores heat from about 50&deg;C (122&deg;F) up past 427&deg;C (800&deg;F), so heat can be collected whenever it is available and the turbine can run at its best operating point, or when power is worth the most.</p>
@@ -216,7 +218,7 @@
 <li>The site needs resilient, behind-the-meter power. See the <a href="community-microgrid-cst-tess.html">micro grid concept</a>.</li>
 </ul>
 
-<div class="note warm"><h5>Show me the numbers</h5><p>Power output depends entirely on your heat source's temperature, flow and hours. Sidel CREN doesn't quote output before a metered baseline. <a href="approach.html">Here's how a project starts.</a></p></div>
+<div class="note warm"><div class="hl">Show me the numbers</div><p>Power output depends entirely on your heat source's temperature, flow and hours. Sidel CREN doesn't quote output before a metered baseline. <a href="approach.html">Here's how a project starts.</a></p></div>
 
 <h2>Quick answers</h2>
 <h3>Can waste heat be converted into electricity?</h3>
@@ -226,7 +228,7 @@
 <h3>Is it better to use waste heat for heating or for electricity?</h3>
 <p>If there is a direct use for the heat, such as process water, space heating or drying, using it as heat is usually worth more because almost all of it is put to work. Converting heat to electricity makes the most sense for high-temperature heat, or for heat that has no direct use nearby.</p>
 
-<div class="sources"><h5>Sources</h5><ul>
+<div class="sources"><div class="hl">Sources</div><ul>
 <li><a href="https://ijeit.misuratau.edu.ly/index.php/ijeit/article/view/123" target="_blank" rel="noopener">Pathak &amp; Shukla / IJEIT: Waste Heat Conversion to Power via Organic Rankine Cycle</a></li>
 <li><a href="https://etl.energysecurity.gov.uk/products/waste-heat-electricity-conversion-equipment/organic-rankine-cycle-heat-recovery-equipment" target="_blank" rel="noopener">UK Energy Technology List: ORC heat recovery equipment criteria</a></li>
 </ul></div>
@@ -255,7 +257,7 @@
       <p style="color:#7d9187">Stop the Waste. Power the Future.</p>
     </div>
     <div class="col">
-      <h5>The System</h5>
+      <div class="hl">The System</div>
       <a href="rotary-particulate-collector.html">Rotary Particulate Collector</a>
       <a href="flue-gas-condenser-heat-recovery.html">SRU Flue Gas Condenser</a>
       <a href="tess-thermal-energy-storage.html">TESS PCM Heat Storage</a>
@@ -263,7 +265,7 @@
       <a href="greenhouse-co2-reuse.html">Greenhouse Value</a>
     </div>
     <div class="col">
-      <h5>Company</h5>
+      <div class="hl">Company</div>
       <a href="industries.html">Industries We Serve</a>
       <a href="case-studies.html">Case Studies</a>
       <a href="approach.html">Our Approach</a>
@@ -274,7 +276,7 @@
       <a href="contact.html">Contact</a>
     </div>
     <div class="col">
-      <h5>Get in touch</h5>
+      <div class="hl">Get in touch</div>
       <p style="color:#e6f0ea;font-weight:600;margin-bottom:2px">Michael Logan</p>
       <p style="margin-bottom:12px">President &amp; Chairman, Sidel CREN</p>
       <a href="mailto:michaellogan@sidelcren.com">michaellogan@sidelcren.com</a>

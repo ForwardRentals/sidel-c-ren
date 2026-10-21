@@ -5,21 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Can Data Center Waste Heat Be Reused? — Sidel CREN</title>
 <link rel="icon" type="image/png" href="assets/cren-logo.png">
-<meta name="description" content="Almost every watt a data center draws ends up as heat. Where that heat can go, why liquid cooling changes the math, and the practical problems every heat-reuse project has to solve.">
+<meta name="description" content="Almost every watt a data center draws becomes heat. Where it can go, why liquid cooling changes the math, and the problems heat reuse must solve.">
 <link rel="canonical" href="https://sidelcren.com/data-center-waste-heat-reuse.html">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Sidel CREN">
 <meta property="og:title" content="Can Data Center Waste Heat Be Reused? — Sidel CREN">
-<meta property="og:description" content="Almost every watt a data center draws ends up as heat. Where that heat can go, why liquid cooling changes the math, and the practical problems every heat-reuse project has to solve.">
+<meta property="og:description" content="Almost every watt a data center draws becomes heat. Where it can go, why liquid cooling changes the math, and the problems heat reuse must solve.">
 <meta property="og:url" content="https://sidelcren.com/data-center-waste-heat-reuse.html">
 <meta property="og:image" content="https://sidelcren.com/assets/nova-datacenter.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Can Data Center Waste Heat Be Reused? — Sidel CREN">
-<meta name="twitter:description" content="Almost every watt a data center draws ends up as heat. Where that heat can go, why liquid cooling changes the math, and the practical problems every heat-reuse project has to solve.">
+<meta name="twitter:description" content="Almost every watt a data center draws becomes heat. Where it can go, why liquid cooling changes the math, and the problems heat reuse must solve.">
 <meta name="twitter:image" content="https://sidelcren.com/assets/nova-datacenter.jpg">
+<link rel="preload" as="image" href="assets/nova-datacenter.webp" imagesrcset="assets/nova-datacenter-800.webp 800w, assets/nova-datacenter.webp 1200w" imagesizes="100vw" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;700&family=Sora:wght@300;400;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@700&family=Sora:wght@300;400;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@700&family=Sora:wght@300;400;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap"></noscript>
 <link rel="stylesheet" href="css/style.css">
 <script type="application/ld+json">
 {
@@ -165,7 +167,7 @@
 </nav>
 
 <header class="hero short" id="top">
-  <div class="hero-bg"><img src="assets/nova-datacenter.jpg" alt="Data center server hall"></div>
+  <div class="hero-bg"><img fetchpriority="high" src="assets/nova-datacenter.webp" srcset="assets/nova-datacenter-800.webp 800w, assets/nova-datacenter.webp 1200w" sizes="100vw" alt="Data center server hall"></div>
   <div class="hero-inner">
     <span class="eyebrow">DATA CENTERS</span>
     <h1>Can data center waste heat<br><span class="grad">actually be reused?</span></h1>
@@ -176,7 +178,7 @@
 <article class="post">
 <div class="meta"><a href="blog.html" style="text-decoration:none"><b>Sidel CREN Blog</b></a> &middot; October 7, 2026 &middot; Data centers</div>
 
-<div class="answer"><h5>The short answer</h5>
+<div class="answer"><div class="hl">The short answer</div>
 <p>Yes. Almost every kilowatt-hour a data center draws ends up as heat, and that heat can warm homes, buildings, greenhouses and process water. The obstacles are that it is <b>low-temperature</b>, it is produced <b>24/7 while heat demand is seasonal</b>, and the facility is often <b>far from anyone who needs it</b>. Liquid cooling and thermal storage are what change that.</p></div>
 
 <h2>Where the heat comes from</h2>
@@ -212,7 +214,7 @@
 <p>Storage solves the timing problem. <a href="tess-thermal-energy-storage.html">Novacab TESS</a> stores heat as latent heat in a phase-change material, from roughly 50&deg;C (122&deg;F) upward. Heat captured from the cooling loop can be banked when nobody needs it and released when someone does, for heating or for power generation. Sidel CREN's <a href="data-center-waste-heat-recovery.html">data center approach</a> intercepts the heat before it reaches the cooling tower, so the same system can also cut cooling-tower load and water use.</p>
 <p>This is also the idea behind the community power plant concept: put the heat source, the storage and the heat users close together on purpose. See the <a href="community-microgrid-cst-tess.html">micro grid page</a>.</p>
 
-<div class="note warm"><h5>Questions to ask before a heat-reuse project</h5><p>What temperature does your cooling loop actually return at? Who within a mile could use heat, and when? Can the reuse loop be bypassed without touching cooling? Those three answers decide whether a project pencils out, and they come before any savings estimate. <a href="contact.html#audit-form">Start with a data request.</a></p></div>
+<div class="note warm"><div class="hl">Questions to ask before a heat-reuse project</div><p>What temperature does your cooling loop actually return at? Who within a mile could use heat, and when? Can the reuse loop be bypassed without touching cooling? Those three answers decide whether a project pencils out, and they come before any savings estimate. <a href="contact.html#audit-form">Start with a data request.</a></p></div>
 
 <h2>Quick answers</h2>
 <h3>Can data center waste heat be reused?</h3>
@@ -222,7 +224,7 @@
 <h3>Does liquid cooling make data center heat recovery easier?</h3>
 <p>Yes. Direct-to-chip and immersion liquid cooling return water at much higher temperatures than air cooling, which makes the heat more useful for heating, storage and, at the upper end, power generation.</p>
 
-<div class="sources"><h5>Sources</h5><ul>
+<div class="sources"><div class="hl">Sources</div><ul>
 <li><a href="https://www.ramboll.com/en-us/projects/energy/meta-surplus-heat-to-district-heating" target="_blank" rel="noopener">Ramboll: Meta surplus heat to district heating (Odense)</a></li>
 <li><a href="https://www.districtenergy.org/blogs/district-energy/2026/08/24/data-center-heats-9000-homes-how-meta-established" target="_blank" rel="noopener">International District Energy Association: Data center heats 9,000 homes (Aug 2026)</a></li>
 <li><a href="https://sustainability.atmeta.com/asset/fb-denmark-data-center-to-warm-local-community" target="_blank" rel="noopener">Meta Sustainability: Denmark data center to warm local community</a></li>
@@ -252,7 +254,7 @@
       <p style="color:#7d9187">Stop the Waste. Power the Future.</p>
     </div>
     <div class="col">
-      <h5>The System</h5>
+      <div class="hl">The System</div>
       <a href="rotary-particulate-collector.html">Rotary Particulate Collector</a>
       <a href="flue-gas-condenser-heat-recovery.html">SRU Flue Gas Condenser</a>
       <a href="tess-thermal-energy-storage.html">TESS PCM Heat Storage</a>
@@ -260,7 +262,7 @@
       <a href="greenhouse-co2-reuse.html">Greenhouse Value</a>
     </div>
     <div class="col">
-      <h5>Company</h5>
+      <div class="hl">Company</div>
       <a href="industries.html">Industries We Serve</a>
       <a href="case-studies.html">Case Studies</a>
       <a href="approach.html">Our Approach</a>
@@ -271,7 +273,7 @@
       <a href="contact.html">Contact</a>
     </div>
     <div class="col">
-      <h5>Get in touch</h5>
+      <div class="hl">Get in touch</div>
       <p style="color:#e6f0ea;font-weight:600;margin-bottom:2px">Michael Logan</p>
       <p style="margin-bottom:12px">President &amp; Chairman, Sidel CREN</p>
       <a href="mailto:michaellogan@sidelcren.com">michaellogan@sidelcren.com</a>

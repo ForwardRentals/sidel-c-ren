@@ -17,9 +17,11 @@
 <meta name="twitter:title" content="Community Microgrid: Solar Thermal + Storage — Sidel CREN">
 <meta name="twitter:description" content="Concentrated solar thermal plus Novacab TESS storage: a dispatchable community microgrid with no lithium-ion battery, powering essential loads day and night.">
 <meta name="twitter:image" content="https://sidelcren.com/assets/community-microgrid-cst-tess.jpg">
+<link rel="preload" as="image" href="assets/community-microgrid-cst-tess.webp" imagesrcset="assets/community-microgrid-cst-tess-800.webp 800w, assets/community-microgrid-cst-tess.webp 1448w" imagesizes="100vw" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;700&family=Sora:wght@300;400;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@700&family=Sora:wght@300;400;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@700&family=Sora:wght@300;400;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap"></noscript>
 <link rel="stylesheet" href="css/style.css">
 <script type="application/ld+json">
 {
@@ -95,7 +97,7 @@
 </nav>
 
 <header class="hero short" id="top">
-  <div class="hero-bg"><img src="assets/community-microgrid-cst-tess.jpg" alt="Community microgrid combining concentrated solar thermal collectors with Novacab TESS thermal storage, powering data/telecom, clinic, school, grocery and water utility loads"></div>
+  <div class="hero-bg"><img fetchpriority="high" src="assets/community-microgrid-cst-tess.webp" srcset="assets/community-microgrid-cst-tess-800.webp 800w, assets/community-microgrid-cst-tess.webp 1448w" sizes="100vw" alt="Community microgrid combining concentrated solar thermal collectors with Novacab TESS thermal storage, powering data/telecom, clinic, school, grocery and water utility loads"></div>
   <div class="hero-inner">
     <span class="eyebrow"><b>INDUSTRY 07</b> &middot; Community Microgrid &mdash; CST + TESS</span>
     <h1>Sun in.<br><span class="grad">Power out, day and night.</span></h1>
@@ -129,12 +131,12 @@
   </div>
 
   <div class="note reveal">
-    <h5>Microgrid &mdash; first pilot</h5>
+    <div class="hl">Microgrid &mdash; first pilot</div>
     <p>Best fit: communities, campuses or utility service areas where essential loads &mdash; data/telecom, clinic, school, grocery, water &mdash; need resilient, dispatchable power and a bypassable pilot can prove daily output, dispatch reliability and land/water use before scaling to a full microgrid buildout.</p>
   </div>
 
   <figure class="fig reveal">
-    <img src="assets/community-microgrid-cst-tess.jpg" alt="Community Microgrid CST plus TESS diagram: concentrated solar thermal field, TESS 1MW modules, daytime charging cycle, nighttime discharge, and distribution to data/telecom, clinic, school, grocery and water utility loads" loading="lazy" decoding="async">
+    <img src="assets/community-microgrid-cst-tess.webp" srcset="assets/community-microgrid-cst-tess-800.webp 800w, assets/community-microgrid-cst-tess.webp 1448w" sizes="(max-width: 1120px) 100vw, 1120px" alt="Community Microgrid CST plus TESS diagram: concentrated solar thermal field, TESS 1MW modules, daytime charging cycle, nighttime discharge, and distribution to data/telecom, clinic, school, grocery and water utility loads" loading="lazy" decoding="async">
     <figcaption>The full system: a linear Fresnel CST field charges TESS by day; TESS discharges through the ORC turbine to power data/telecom, clinic, school, grocery and water-utility loads day and night.</figcaption>
   </figure>
 </section>
@@ -145,7 +147,7 @@
   <p class="sub reveal d2">Parabolic troughs and dish concentrators have been in commercial use since the 1980s. Either way, the mirrors focus sunlight into heat. TESS stores that heat and converts it to electricity through its ORC. TESS modules capture about 3.5&nbsp;MMBtu per charge cycle and average about 10&nbsp;MMBtu per day in a high-sun location. That works out to roughly <b>16.8&nbsp;MWh of electricity every 24&nbsp;hours</b> from a single 1&nbsp;MW TESS (about 700&nbsp;kW, around the clock). AI controllers schedule when stored heat is released. That lets the system power loads 24&times;7 and, where the law allows, sell surplus power to the grid.</p>
 
   <figure class="fig reveal">
-    <img src="assets/solar-dish-trough-tess.jpg" alt="Concentrated solar thermal field in a high-desert setting: parabolic trough rows and solar dish concentrators feeding stacked TESS thermal storage modules, with ORC and cooling equipment alongside" loading="lazy" decoding="async">
+    <img src="assets/solar-dish-trough-tess.webp" alt="Concentrated solar thermal field in a high-desert setting: parabolic trough rows and solar dish concentrators feeding stacked TESS thermal storage modules, with ORC and cooling equipment alongside" loading="lazy" decoding="async">
     <figcaption>Parabolic troughs and solar dishes collect heat by day; TESS modules store it and discharge through the ORC for dispatchable power. Concept illustration, not a site photograph.</figcaption>
   </figure>
 
@@ -198,13 +200,13 @@
   </ul>
 
   <div class="note reveal">
-    <h5>Scaling beyond the community</h5>
+    <div class="hl">Scaling beyond the community</div>
     <p>For larger, utility-scale solar-thermal fields in West Texas, two things are sized separately. The mirror field is sized for annual MWh and winter sun. TESS storage is sized for the night-time hours the site must cover. Then CST + TESS is compared with PV + batteries on equal service: the same annual MWh, dependable MW, night duration and reliability. We screen every larger configuration this way before quoting output or land.</p>
   </div>
 </section>
 
 <div class="showcase">
-  <img src="assets/community-microgrid-cst-tess.jpg" alt="Community Microgrid CST plus TESS diagram: concentrated solar thermal field, TESS 1MW modules, and distribution to data/telecom, clinic, school, grocery and water utility" loading="lazy" decoding="async">
+  <img src="assets/community-microgrid-cst-tess.webp" srcset="assets/community-microgrid-cst-tess-800.webp 800w, assets/community-microgrid-cst-tess.webp 1448w" sizes="(max-width: 1120px) 100vw, 1120px" alt="Community Microgrid CST plus TESS diagram: concentrated solar thermal field, TESS 1MW modules, and distribution to data/telecom, clinic, school, grocery and water utility" loading="lazy" decoding="async">
   <div class="cap">
     <div class="kick reveal">Resilient by design</div>
     <h2 class="reveal d1">Dispatchable, clean,<br>and built for decades.</h2>
@@ -220,7 +222,7 @@
     <p>Site DNI (direct normal irradiance) data; preferred concentrator type (trough, dish or Fresnel); available land and orientation; essential-load list and peak/average demand for each building; existing grid interconnection or islanding requirements; water availability; backup/black-start requirements; permitting and land-use constraints.</p>
   </div>
   <div class="note warm reveal">
-    <h5>Validation boundary</h5>
+    <div class="hl">Validation boundary</div>
     <p>All claims relating to site output, footprint, service life, dispatch reliability, payback, incentives and deployment economics are planning assumptions, analogues or manufacturer reference data &mdash; unless and until they are validated for your specific site through engineering, measurement, vendor quotation, financing documentation, legal review and final commercial agreements.</p>
   </div>
 </section>
@@ -250,7 +252,7 @@
       <p style="color:#7d9187">Stop the Waste. Power the Future.</p>
     </div>
     <div class="col">
-      <h5>The System</h5>
+      <div class="hl">The System</div>
       <a href="rotary-particulate-collector.html">Rotary Particulate Collector</a>
       <a href="flue-gas-condenser-heat-recovery.html">SRU Flue Gas Condenser</a>
       <a href="tess-thermal-energy-storage.html">TESS PCM Heat Storage</a>
@@ -258,7 +260,7 @@
       <a href="greenhouse-co2-reuse.html">Greenhouse Value</a>
     </div>
     <div class="col">
-      <h5>Company</h5>
+      <div class="hl">Company</div>
       <a href="industries.html">Industries We Serve</a>
       <a href="case-studies.html">Case Studies</a>
       <a href="approach.html">Our Approach</a>
@@ -268,7 +270,7 @@
       <a href="contact.html">Contact</a>
     </div>
     <div class="col">
-      <h5>Get in touch</h5>
+      <div class="hl">Get in touch</div>
       <p style="color:#e6f0ea;font-weight:600;margin-bottom:2px">Michael Logan</p>
       <p style="margin-bottom:12px">President &amp; Chairman, Sidel CREN</p>
       <a href="mailto:michaellogan@sidelcren.com">michaellogan@sidelcren.com</a>
